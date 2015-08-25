@@ -15,10 +15,8 @@ public class Fundemental4
         int x=1;
       for( x=1;x <= 10;   x++ )
       {
-         showRandomInteger(x, a,randomGenerator );
           int a=x*x;
-         
-         System.out.print(x +"\t"+ a +"\t"+ b);
+         System.out.print(x +"\t"+ a +"\t"+ (int)(x+(x*Math.random())));
          System.out.print("\n");
       }
     }
