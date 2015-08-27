@@ -6,6 +6,7 @@
  * @version (a version number or a date)
  */
 import javax.swing.JOptionPane;
+import java.util.Random;
 public class Temp
 {
     public static void main ( String args[])

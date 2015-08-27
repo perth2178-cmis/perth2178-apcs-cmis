@@ -15,7 +15,8 @@ public class Fundemental6
         myArray=new int[50];
         for(int index=0; index<myArray.length; index++ )
         {
-            System.out.println ((int) Math.ceil(Math.random()*100));
+            System.out.print((int) Math.ceil(Math.random()*100));
+            System.out.print(" ");
         }
     }
 }
