@@ -12,8 +12,8 @@ public class Fundemental7
     public static void main ( String args[])
     {
         int[] myArray;
+        int x=0;
         myArray=new int[5];
-        Random rnd = new Random();
         for(int index=0; index<myArray.length; index++ )
         {
             System.out.print((int) 1*Math.ceil(Math.random()*100));
@@ -21,8 +21,9 @@ public class Fundemental7
             System.out.print((int) -1*Math.ceil(Math.random()*100));
             System.out.print("\t");
         }
-        
+        while (x<myArray.length)
         {
+          System.out.print(myArray);
         }
     }
 }
