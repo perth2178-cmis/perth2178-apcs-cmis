@@ -12,18 +12,31 @@ public class Fundemental7
     public static void main ( String args[])
     {
         int[] myArray;
-        int x=0;
-        myArray=new int[5];
+        myArray=new int[10];
         for(int index=0; index<myArray.length; index++ )
         {
-            System.out.print((int) 1*Math.ceil(Math.random()*100));
-            System.out.print("\t");
-            System.out.print((int) -1*Math.ceil(Math.random()*100));
-            System.out.print("\t");
+            double num=Math.random();
+            if(num<0.5)
+            {
+                 myArray[index]=(int)(-100*(Math.random()));
+                 System.out.print(myArray[index]+(" "));
+            }
+            else{
+                myArray[index]=(int)(100*(Math.random()));
+                 System.out.print(myArray[index]+(" "));
+            }
         }
-        while (x<myArray.length)
+        System.out.print("\n");
+        int index=0;
+        while (index<myArray.length)
         {
-          System.out.print(myArray);
+          System.out.print(myArray[index]+"\n");
+          if(index>0.5)
+            {
+                 myArray[index]=(int)(-100*(Math.random()));
+                 System.out.print(myArray[index]+(" "));
+            }
+          index++;
         }
     }
 }
