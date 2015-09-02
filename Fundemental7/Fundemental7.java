@@ -27,14 +27,25 @@ public class Fundemental7
             }
         }
         System.out.print("\n");
+        int pp=0;
         int index=0;
         while (index<myArray.length)
         {
           System.out.print(myArray[index]+"\n");
-          if(index>0.5)
+          if(index<0.5)
             {
                  myArray[index]=(int)(-100*(Math.random()));
                  System.out.print(myArray[index]+(" "));
+            }
+          else
+          {
+             myArray[index]=(int)(100*(Math.random())); 
+             System.out.print(myArray[index]+(" "));
+             pp++;
+             if(index==myArray.length-1)
+             {
+              System.out.print("there are "+ pp + " positive numbers in the while loop");   
+                }
             }
           index++;
         }

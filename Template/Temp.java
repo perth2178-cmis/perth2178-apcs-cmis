@@ -7,6 +7,7 @@
  */
 import javax.swing.JOptionPane;
 import java.util.Random;
+import java.util.Scanner;
 public class Temp
 {
     public static void main ( String args[])
