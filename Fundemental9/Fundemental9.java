@@ -16,7 +16,7 @@ public class Fundemental9
         int pc=Integer.parseInt(pass);
         if(user.equals("Perth"))
         {
-            if(pass.equals("2178"))
+            if(pc==2178)
             {
                 System.out.println("You have successfully logged in.");
             }
