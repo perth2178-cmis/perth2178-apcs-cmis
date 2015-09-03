@@ -14,12 +14,16 @@ public class Fundemental9
         String user=JOptionPane.showInputDialog("Username");
         String pass=JOptionPane.showInputDialog("Passcode");
         int pc=Integer.parseInt(pass);
-        if(user=)
+        if(user.equals("Perth"))
         {
-            if(pc=)
+            if(pass.equals("2178"))
             {
                 System.out.println("You have successfully logged in.");
             }
+            else
+        {
+            System.out.println("Login unsuccessful. Check your username and password.");
+        }
         }
         else
         {
