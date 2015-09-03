@@ -40,7 +40,6 @@ public class Fundemental7
           else
           {
              myArray[index]=(int)(100*(Math.random())); 
-             System.out.print(myArray[index]+(" "));
              pp++;
              if(index==myArray.length-1)
              {
