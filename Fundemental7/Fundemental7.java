@@ -35,7 +35,6 @@ public class Fundemental7
           if(index<0.5)
             {
                  myArray[index]=(int)(-100*(Math.random()));
-                 System.out.print(myArray[index]+(" "));
             }
           else
           {
