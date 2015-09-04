@@ -25,15 +25,17 @@ public class TestOne
         {
             double x=(Math.random()*100);
             double y=x%2;
-            if(y>0)
+            System.out.println(index+":");
+            
+                if(y>0)
                 {
-                    System.out.println(index+":");
+                    System.out.print(index+":");
                     System.out.print("0");
                     System.out.print(x);
                 }
                 else
                 {
-                    System.out.println(index+":");
+                    System.out.print(index+":");
                     System.out.print("E");
                     System.out.print(x);
                 }
