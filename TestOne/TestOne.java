@@ -24,15 +24,20 @@ public class TestOne
         while(index<myArray.length)
         {
             double x=(Math.random()*100);
-            int y=x%2;
+            double y=x%2;
             if(y>0)
-            {
-                System.out.println
-            }
-            else
-            {
-                System.out.println
-            }
+                {
+                    System.out.println(index+":");
+                    System.out.print("0");
+                    System.out.print(x);
+                }
+                else
+                {
+                    System.out.println(index+":");
+                    System.out.print("E");
+                    System.out.print(x);
+                }
+            
             index++; 
         }
     }
