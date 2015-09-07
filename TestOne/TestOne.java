@@ -20,27 +20,28 @@ public class TestOne
         {
             System.out.println(index+":"+(double)(Math.random()*100));
         }
-        int index=0;
-        while(index<myArray.length)
+        int[] Array;
+        int x=(int)(Math.random()*100);
+        int y=x%2;
+        Array=new int[y];
+        int index=myArray.length;
+        while(index>=0)
         {
-            double x=(Math.random()*100);
-            double y=x%2;
-            System.out.println(index+":");
-            
                 if(y>0)
                 {
                     System.out.print(index+":");
                     System.out.print("0");
                     System.out.print(x);
+                    System.out.print("\n");
                 }
                 else
                 {
                     System.out.print(index+":");
                     System.out.print("E");
                     System.out.print(x);
-                }
-            
-            index++; 
+                    System.out.print("\n");
+                } 
+            index--; 
         }
     }
 }
