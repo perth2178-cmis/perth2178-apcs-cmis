@@ -26,8 +26,7 @@ public class TestOnePartner
         int index=Array.length-1;
         while(index>=0)
         {
-            double p=Array[index];
-            int x=(int)(51*(Math.random()));
+            int x=(int)Array[index];
             int y=x%2;
             if(y==0)
             {
@@ -36,7 +35,7 @@ public class TestOnePartner
                 {
                     System.out.print("E");
                 }
-                System.out.print(p);
+                System.out.print(Array[index]);
             }
             else
             {
@@ -45,7 +44,7 @@ public class TestOnePartner
                 {
                     System.out.print("O");
                 }
-                System.out.print(p);
+                System.out.print(Array[index]);
             }
             System.out.print("\n");
             index--;
