@@ -13,23 +13,23 @@ public class Histagram
         for(int irandom=0;irandom<Arrayrandom.length;irandom++)
         {
            Arrayrandom[irandom]=(int) (100*(Math.random()));
-           
-                for(int index = 0;index<Arraylist.length;index++)
-              {
-                   System.out.print(index+":"); 
-                   if(index==Arrayrandom[irandom])
-                   {
-                       System.out.print("#");
-                       System.out.print("\n");
-                    }
-                    else
-                    {
-                        System.out.print(" ");
-                        System.out.print("\n");
-                    }
-              }
-
         }
-        
+        for(int index = 0;index<Arraylist.length;index++)
+        {
+            System.out.print(index+":");
+            for(int irandom=0;irandom<Arrayrandom.length;irandom++)
+            {
+                int i=0;
+              if(index==Arrayrandom[irandom])
+                 {
+                    System.out.print("#");  
+                 }
+              else
+                 {
+                     System.out.print(" ");  
+                 }
+            }
+            System.out.print("\n");
+        }
+              }
     }
-}
