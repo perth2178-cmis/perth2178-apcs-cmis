@@ -4,10 +4,8 @@ public class Histagram
 {
     public static void main (String args[])
     {
-        int [] Arraylist;
-        Arraylist = new int[100];
-        int [] Hashtag;
-        Hashtag= new int[100];
+        int [] Count;
+        Count= new int[100];
         String input=JOptionPane.showInputDialog("Enter a number");
         int num=Integer.parseInt(input);
         int [] Arrayrandom;
@@ -21,22 +19,18 @@ public class Histagram
         for(int irandom=0;irandom<Arrayrandom.length; irandom++)
            {
                int n= Arrayrandom[irandom];
-               Hashtag[n]++;
+               Count[n]++;
            }
-        int irandom=0;
-        while(irandom<Hashtag.length)
+        for (int irandom=0; irandom<Arrayrandom.length; irandom++)
             {
-                System.out.print(irandom+":");
-            if(Hashtag[irandom]>0)
-            {
-                System.out.print("#");
+                for (int index=0; index<100; index++)
+                {
+                    if(Arrayrandom[irandom]==Count[index])
+                    { 
+                        Count[index]++;
+                    }
+                }
             }
-            else
-            {
-                System.out.print(" ");
-            }
-            System.out.print("\n");
-                irandom++;
-            }
+        
               }
     }
