@@ -10,7 +10,6 @@ public class Histagram
         int num=Integer.parseInt(input);
         int [] Arrayrandom;
         Arrayrandom = new int[num];
-        int hashtag=0;
         for(int irandom=0;irandom<Arrayrandom.length;irandom++)
         {
            Arrayrandom[irandom]=(int) (100*(Math.random()));
@@ -21,16 +20,24 @@ public class Histagram
                int n= Arrayrandom[irandom];
                Count[n]++;
            }
-        for (int irandom=0; irandom<Arrayrandom.length; irandom++)
+        for (int irandom=0; irandom<Count.length; irandom++)
             {
-                for (int index=0; index<100; index++)
-                {
-                    if(Arrayrandom[irandom]==Count[index])
-                    { 
-                        Count[index]++;
-                    }
-                }
+                System.out.println(irandom+":"+Count[irandom]);
             }
+        int irandom=0
+        while(irandom<Count.length)
+        {
+            int hashtag=Count[irandom]
+            if()
+            {
+                System.out.println(irandom+":")
+            }
+            else
+            {
+                System.out.println(irandom+":")
+            }
+            irandom++;
+        }
         
               }
     }
