@@ -5,21 +5,21 @@ public class Song
     private double length;  //in minutes
     private String style;
     
-    // Consturctor for Instance Variable
+    // zero argument
     public Song()
     {
         rank=56;
         length=5.45;
         style=new String("Jazz");
-    }//end constructor Song
+    }//end zero argument
     
-    // zero arguent
+    // three constructor
     public Song(int rank, double length, String style)
     {
         this.rank=rank;
         this.length=length;
         this.style= new String(style);
-    }//end zero argument
+    }//end three constructor
     
     // toString()
     public String toString()
