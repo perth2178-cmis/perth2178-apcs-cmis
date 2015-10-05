@@ -18,10 +18,10 @@ public class Student
     // zero arguent
     public Student(String first, String last, int age, double GPA)
     {
-        first=new String(first);
-        last=new String(last);
-        age=age;
-        GPA=GPA;
+        this.first=new String(first);
+        this.last=new String(last);
+        this.age=age;
+        this.GPA=GPA;
     }//end zero argument
     
     // toString()
