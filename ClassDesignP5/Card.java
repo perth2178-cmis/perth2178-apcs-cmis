@@ -8,7 +8,7 @@ public class Card
     public Card()
     {
         rank=new String("A");
-        suit=new String("Spades");
+        suit=new String("♠");
     }//end constructor Card
     
     // zero arguent
@@ -22,7 +22,7 @@ public class Card
     public String toString()
     {
         String output=new String();
-        output="Card\nRank: "+rank+"\nSuit: "+suit+"\n";
+        output=rank+suit+"\n";
         return output;
     }//end to String
     
