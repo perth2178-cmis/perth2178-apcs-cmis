@@ -4,12 +4,17 @@ public class CardDriver
     public static void main(String[] args)
     {
         int[] MyHand=new int[3];
-        Card card1=new Card();
-        Card card2=new Card();
-        Card card3=new Card();
+        String[] PossibleRank={"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+        String[] PossibleSuit={"♠","♣","♦","♥"};
+        int[] Rank= new int[3]; 
+        int[] Suit= new int[3];
         System.out.println("Your Hand:");
-        System.out.println(card1);
-        System.out.println(card2);
-        System.out.println(card3);
+        for(int i=0;i<MyHand.length;i++)
+        {
+            Rank[i]=(int)(Math.random() * 13);
+            Suit[i]=(int)(Math.random() * 4);
+            Card hand=new Card(PossibleRank[Rank[i]],PossibleSuit[Suit[i]]);
+            System.out.print(hand);
+        }
     }//end method main
 }//end class CardDriver
