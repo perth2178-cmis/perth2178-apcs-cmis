@@ -1,8 +1,8 @@
 public class Card 
 {
     // Instance Variables
-    private String rank;
-    private String suit;
+    public String rank;
+    public String suit;
     
     // Consturctor for Instance Variable
     public Card()
