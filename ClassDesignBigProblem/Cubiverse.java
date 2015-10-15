@@ -20,13 +20,13 @@ public class Cubiverse
         w=1;
         h=1;
         d=1;
-        volume=1;
+        volume=w*h*d;
         x=0.50;
         y=0.50;
         z=0.50;
-        dleft=0.50;
-        dbottom=0.50;
-        dback=0.50;
+        dleft=w*x;
+        dbottom=h*y;
+        dback=d*z;
     }//end constructor Cubiverse
 
     // multiple  argument
@@ -36,13 +36,13 @@ public class Cubiverse
         this.w=w;
         this.h=h;
         this.d=d;
-        volume=Math.random();
+        volume=w*h*d;
         x=0.50;
         y=0.50;
         z=0.50;
-        dleft=w/2;
-        dbottom=h/2;
-        dback=d/2;
+        dleft=w*x;
+        dbottom=h*y;
+        dback=d*z;
     }//end multiple argument
     // multiple argument
     public Cubiverse(double x,double y,double z,String name)
@@ -54,27 +54,27 @@ public class Cubiverse
         w=1;
         h=1;
         d=1;
-        volume=1;
-        dleft=w/2;
-        dbottom=h/2;
-        dback=d/2;
+        volume=w*h*d;
+        dleft=w*x;
+        dbottom=h*y;
+        dback=d*z;
     }//end multiple  argument
 
     // toString()
     public String toString()
     {
         String output=new String();
-        output="Name: Defualt"+name+
-        "\nw: "+w+
-        "\nh: "+h+
-        "\nd: "+d+
-        "\nvolume: "+volume+
-        "\nx: "+x+
-        "\ny:"+y+
-        "\nz:"+z+
-        "\ndistance from left: "+dleft+
-        "\ndistance from bottom: "+dbottom+
-        "\ndistance from back: " +dback+"\n";
+        output=String.format("Name: %s\n"+
+                             "w: %d\n"+        
+                             "h: %d\n"+
+                             "d: %d\n"+
+                             "volume: %d\n"+
+                             "x: %.2f\n"+
+                             "y: %.2f\n"+
+                             "z: %.2f\n"+
+                             "distance from left: %.2f\n"+
+                             "distance from bottom: %.2f\n"+
+                             "distance from back: %.2f\n", name, w, h, d, volume, x, y, z, dleft, dbottom, dback);
         return output;
     }//end to String
 

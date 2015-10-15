@@ -89,6 +89,8 @@ public class CardDriverP6
                 rankvalue=ranks;
             }
             System.out.println(rankvalue);
+            cardscore=cardscore+rankvalue;
+            System.out.println(cardscore);
         }
         for(int i=0;i<Player1.length;i++)
         {
