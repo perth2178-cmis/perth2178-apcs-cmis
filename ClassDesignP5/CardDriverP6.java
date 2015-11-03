@@ -14,7 +14,7 @@ public class CardDriverP6
         String[] PossibleSuit={"♠","♣","♦","♥"};
         int cardscore=0;
         int dealerscore=0;
-        int rankvalue=2;
+        int rankvalue=0;
         int[] Rank= new int[2]; 
         int[] Suit= new int[2];
         System.out.println("Dealer:");
