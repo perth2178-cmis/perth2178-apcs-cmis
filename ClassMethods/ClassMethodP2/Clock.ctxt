@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ convertDaylightSaving()
-comment1.params=
-comment1.target=Clock()
-comment2.params=min\ sec
-comment2.target=Clock(int,\ int)
+comment0.target=Clock()
+comment1.params=min\ sec
+comment1.target=Clock(int,\ int)
+comment2.params=hours
+comment2.target=void\ convertDaylightSaving(int)
 comment3.params=
 comment3.target=java.lang.String\ getTime()
 comment4.params=time
