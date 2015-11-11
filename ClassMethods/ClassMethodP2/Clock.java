@@ -15,7 +15,7 @@ public class Clock
         min=28;
         sec=35;
         dst=1;
-        Time=new String(hour+":"+min+":"+sec);
+        Time=new String(this.hour+":"+min+":"+sec);
     }//end zero argument
     
     // three constructor

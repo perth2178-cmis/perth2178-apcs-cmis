@@ -17,7 +17,9 @@ public class iRobot_M1
                 "Calculatinging Spawn Point", JOptionPane.QUESTION_MESSAGE, null,
                 choices, // Array of choices
                 choices[1]); // Initial choice
-        System.out.println(location+", interesting let's go explore.");
-        System.out.println("");
+        if(choices.equals("Galifrey"))
+        {
+            System.out.println("*Doctor Who Theme* Well here we are");
+        }
     }
 }
