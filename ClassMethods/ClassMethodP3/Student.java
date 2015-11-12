@@ -6,30 +6,28 @@ public class Student
     private int age;
     public double[] grades;
     private double GPA;
-    private double gpa;
     private double totalgrade;
-    
+
     // Consturctor for Instance Variable
     public Student()
     {
         first=new String("Shaun");
         last=new String("Miller");
         age=17;
-        GPA=3.7;
         grades=new double[5];
+        this.grades[0]=4.0;
+        this.grades[1]=4.0;
+        this.grades[2]=3.5;
+        this.grades[3]=4.0;
+        this.grades[4]=4.0;
     }//end constructor Song
 
     // zero arguent
-    public Student(String first, String last, int age,double[] grades)
+    public Student(String first, String last, int age)
     {
         this.first=new String(first);
         this.last=new String(last);
         this.age=age;
-        this.grades[0]=grades[0];
-        this.grades[1]=grades[1];
-        this.grades[2]=grades[2];
-        this.grades[3]=grades[3];
-        this.grades[4]=grades[4];
     }//end zero argument
 
     //getter
@@ -39,9 +37,9 @@ public class Student
     }//end method getGPA()
 
     // setter
-    public void setGPA(double gpa)
+    public void setGPA(Student gpa)
     {
-        this.GPA=gpa;
+        this.GPA=;
     }//end method setGPA()
 
     public double calcGPA()

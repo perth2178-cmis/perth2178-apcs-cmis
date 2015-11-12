@@ -5,13 +5,10 @@ public class ClockDriver
     {
         Clock kitchenClock=new Clock();
         Clock bedroomClock=new Clock();
-        String time;
-        int hour=Integer.parseInt(JOptionPane.showInputDialog("Hours?"));
-        int min=Integer.parseInt(JOptionPane.showInputDialog("Minutes?"));
-        int sec=Integer.parseInt(JOptionPane.showInputDialog("Seconds?"));
+        bedroomClock.convertDaylightSaving(1);
+        kitchenClock.setTime(kitchenClock);
         System.out.println(kitchenClock);
-        time=new String(hour+":"+min+":"+sec);
-        bedroomClock.setTime(time);
+        bedroomClock.setTime(bedroomClock);
         System.out.println(bedroomClock);
     }//end method main
 }//end class ClockDriver

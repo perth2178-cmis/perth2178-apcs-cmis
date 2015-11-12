@@ -4,7 +4,6 @@ public class Clock
     private int hour;
     private int min;
     private int sec;
-    private int dst;
     private String Time;
     private String totalsec;
     
@@ -14,8 +13,6 @@ public class Clock
         hour=10;
         min=28;
         sec=35;
-        dst=1;
-        Time=new String(this.hour+":"+min+":"+sec);
     }//end zero argument
     
     // three constructor
@@ -28,7 +25,7 @@ public class Clock
     //Daylight Savings calculator
     public void convertDaylightSaving(int hours)
     {
-        this.hour=this.hour+dst;
+        this.hour=this.hour+hours;
     }
     
     //getter
@@ -38,9 +35,9 @@ public class Clock
     }//end method getYearReleased()
 
     // setter
-    public void setTime(String time)
+    public void setTime(Clock time)
     {
-        this.Time=time;
+        this.Time=new String(hour+":"+min+":"+sec);
     }//end method setYearReleased()
 
     //second calculator
