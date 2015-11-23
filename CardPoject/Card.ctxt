@@ -2,7 +2,7 @@
 comment0.params=
 comment0.target=Card()
 comment1.params=
-comment1.target=int\ setvalue()
+comment1.target=int\ getvalue()
 comment2.params=
 comment2.target=java.lang.String\ toString()
 numComments=3

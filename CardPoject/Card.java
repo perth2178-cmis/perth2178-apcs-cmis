@@ -22,7 +22,7 @@ public class Card
         card =new String(suit+rank); 
     }
     
-    public int setvalue()
+    public int getvalue()
     {
         int value;
         if(rank.equals("J"))
@@ -52,7 +52,7 @@ public class Card
     public String toString()
     {
         String output=new String();
-        output=card+"\n"+setvalue();
+        output=card+"\n"+getvalue();
         return output;
     }
 }
