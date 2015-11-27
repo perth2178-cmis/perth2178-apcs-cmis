@@ -3,9 +3,12 @@ public class StudentDriver
 {
     public static void main(String[] args)
     {
+        double[] grades=new double[5];
         Student senior001=new Student();
-        Student senior002=new Student("Joe","Senior",15);
         System.out.println(senior001);
+        Student senior002=new Student();
+        senior002.setGPA();
+        senior002.calcGPA();
         System.out.println(senior002);
     }//end method main
 }//end class StudentDriver

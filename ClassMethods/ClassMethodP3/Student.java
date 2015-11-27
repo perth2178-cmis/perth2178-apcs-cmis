@@ -4,43 +4,34 @@ public class Student
     private String first;
     private String last;
     private int age;
-    public double[] grades;
+    private double[] grades;
     private double GPA;
     private double totalgrade;
 
     // Consturctor for Instance Variable
     public Student()
     {
-        first=new String("Shaun");
-        last=new String("Miller");
+        first=new String("Joe");
+        last=new String("Senior");
         age=17;
+        GPA=4.0;
         grades=new double[5];
-        this.grades[0]=4.0;
-        this.grades[1]=4.0;
-        this.grades[2]=3.5;
-        this.grades[3]=4.0;
-        this.grades[4]=4.0;
-    }//end constructor Song
-
+        grades[0]=4.0;
+        grades[1]=4.0;
+        grades[2]=3.5;
+        grades[3]=4.0;
+        grades[4]=4.0;
+    }//end constructor Student
+    
     // zero arguent
-    public Student(String first, String last, int age)
+    public double setGPA()
     {
-        this.first=new String(first);
-        this.last=new String(last);
-        this.age=age;
-    }//end zero argument
-
-    //getter
-    public double getGPA()
-    {
+        for(int i=0;i<grades.length;i++)
+        {
+            this.grades[i]=4.0;
+        }
         return GPA;
-    }//end method getGPA()
-
-    // setter
-    public void setGPA(Student gpa)
-    {
-        this.GPA=;
-    }//end method setGPA()
+    }//end zero argument
 
     public double calcGPA()
     {
@@ -48,8 +39,8 @@ public class Student
         {
             totalgrade=grades[i]++;
         }
-        gpa=totalgrade/5;
-        return gpa;
+        GPA=totalgrade/5;
+        return GPA;
     }
 
     // toString()
@@ -57,10 +48,10 @@ public class Student
     {
         String output=new String();
         output="Student Profile:"+"\n"+
-        "First Name:"+first+"\tLast Name:"+last+"\n"+
-        "Age:"+age+"\n"+
-        "Average GPA:"+calcGPA()+"\n";
+        "First Name: "+first+"\nLast Name: "+last+"\n"+
+        "Age: "+age+"\n"+
+        "Average GPA: "+calcGPA()+"\n";
         return output;
     }//end to String
 
-}//end of class Song
+}//end of class Student
