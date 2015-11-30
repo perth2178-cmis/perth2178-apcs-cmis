@@ -4,6 +4,7 @@ public class Student
     private String first;
     private String last;
     private int age;
+    private String endgrade;
     private double[] grades;
     private double GPA;
     private double totalgrade;
@@ -28,12 +29,12 @@ public class Student
     {
         return GPA;
     }
-    // zero arguent
+    
     public void setGPA()
     {
         for(int i=0;i<grades.length;i++)
         {
-            this.grades[i]=4.0;
+            this.grades[i]=2.0;
         }
     }//end zero argument
 
@@ -47,6 +48,31 @@ public class Student
         GPA=totalgrade/grades.length;
         return GPA;
     }
+    
+    public String getGrade()
+    {
+        if(calcGPA()==4.0)
+        {
+            endgrade=new String("A");
+        }
+        else if(GPA>=3.0&&GPA<4.0)
+        {
+            endgrade=new String("B");
+        }
+        else if(GPA>=2.0&&GPA<3.0)
+        {
+            endgrade=new String("C");
+        }
+        else if(GPA>=1.0&&GPA<2.0)
+        {
+            endgrade=new String("D");
+        }
+        else
+        {
+            endgrade=new String("F");
+        }
+        return endgrade;
+    }
 
     // toString()
     public String toString()
@@ -55,7 +81,8 @@ public class Student
         output="Student Profile:"+"\n"+
         "First Name: "+first+"\nLast Name: "+last+"\n"+
         "Age: "+age+"\n"+
-        "Average GPA: "+calcGPA()+"\n";
+        "Average GPA: "+calcGPA()+
+        "\nLetter Grade: "+getGrade()+"\n";
         return output;
     }//end to String
 
