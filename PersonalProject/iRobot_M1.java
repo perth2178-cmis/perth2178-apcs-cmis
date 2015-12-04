@@ -12,14 +12,14 @@ public class iRobot_M1
         Scanner scanner1 = new Scanner(System.in);
         String username = scanner1.nextLine();
         System.out.println("Hi "+username+" my name is "+botname);
-        String[] choices = { "Tatuin", "Galifrey", "Victorian London", "Futuristic Japan", "The Enterpirse", "Present Day Earth" };
+        String[] choices = { "Tatuin", "Galifrey", "Victorian London", "Ship", "The Enterprise", "The Forest" };
         String location = (String) JOptionPane.showInputDialog(null, "Where am I?",
                 "Calculatinging Spawn Point", JOptionPane.QUESTION_MESSAGE, null,
                 choices, // Array of choices
                 choices[1]); // Initial choice
         if(choices.equals("Galifrey"))
         {
-            System.out.println("*Doctor Who Theme* Well here we are");
+            choices.Galifrey();
         }
     }
 }
