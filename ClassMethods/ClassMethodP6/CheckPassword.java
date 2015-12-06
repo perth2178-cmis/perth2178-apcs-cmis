@@ -1,8 +1,9 @@
 public class CheckPassword
 {
     private String pass;
+    private boolean checkresult;
 
-    public String check(String pass)
+    public boolean check(String pass)
     {
         if(pass.length()<6)
         {
@@ -12,8 +13,30 @@ public class CheckPassword
         {
             if(pass.substring(i,i+1).equals("+"))
             {
-                System.out.println("Invalid password");
+                checkresult=true;
+            }
+            else if(pass.substring(i,i+1).equals("-"))
+            {
+                checkresult=true;
+            }
+            else if(pass.substring(i,i+1).equals("*"))
+            {
+                checkresult=true;
+            }
+            else if(pass.substring(i,i+1).equals("/"))
+            {
+                checkresult=true;
+            }
+            else if(pass.substring(i,i+1).equals("@"))
+            {
+                checkresult=true;
+            }
+            else
+            {
+                checkresult=false;
+                System.out.println("Invalid password you need at least one non-alphanumeric character.");
             }
         }
+        return checkresult;
     }
 }
