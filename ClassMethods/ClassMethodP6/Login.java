@@ -6,7 +6,8 @@ public class Login
         String user=JOptionPane.showInputDialog("Set Username");
         String pass=JOptionPane.showInputDialog("Set Password");
         CheckPassword password=new CheckPassword();
-        CheckPassword.check(password);
+        password.check(pass);
+        
         
     }
 }
