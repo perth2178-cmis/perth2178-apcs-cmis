@@ -4,12 +4,12 @@ public class ClassTemp
     
     
     // Consturctor for Instance Variable
-    public Song()
+    public Temp()
     {
-    }//end constructor Song
+    }//end constructor 
     
     // zero arguent
-    public Song()
+    public Temp()
     {
     }//end zero argument
     
@@ -18,4 +18,4 @@ public class ClassTemp
     {
     }//end to String
     
-}//end of class Song
+}//end of class 
