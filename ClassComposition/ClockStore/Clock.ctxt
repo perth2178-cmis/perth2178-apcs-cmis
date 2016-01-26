@@ -3,4 +3,6 @@ comment0.params=
 comment0.target=Clock()
 comment1.params=hour\ min\ sec
 comment1.target=Clock(int,\ int,\ int)
-numComments=2
+comment2.params=seconds
+comment2.target=void\ totalSeconds(Clock)
+numComments=3
