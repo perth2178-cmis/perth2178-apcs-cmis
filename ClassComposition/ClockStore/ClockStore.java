@@ -13,7 +13,7 @@ public class ClockStore
         clockInStock[2]=Clock3;
     }
 
-    /*public int mostSeconds()
+    public int mostSeconds()
     {
         int total=0;
         int newtotal=0;
@@ -27,7 +27,7 @@ public class ClockStore
             }
         }
         return newtotal;
-    }*/
+    }
     
     public String toString()
     {

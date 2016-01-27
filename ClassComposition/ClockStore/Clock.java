@@ -5,7 +5,7 @@ public class Clock
     private int min;
     private int sec;
     private String time;
-    
+
     //zero argument
     public Clock()
     {
@@ -13,7 +13,7 @@ public class Clock
         min=28;
         sec=35;
     }//end zero argument
-    
+
     // three constructor
     public Clock(int hour, int min, int sec)
     {
@@ -22,7 +22,7 @@ public class Clock
         this.sec=sec;
         time=new String(hour+":"+min+":"+sec);
     }
-    
+
     public void totalSeconds(Clock seconds)
     {
         int sechour=0;
@@ -32,4 +32,11 @@ public class Clock
         secmin=min*60;
         total=sechour+secmin+sec;
     }
+
+    public String toString()
+    {
+        String output=new String();
+        output="The time is now "+hour+":"+min+":"+sec;
+        return output;
+    }//end toString
 }//end class Clock

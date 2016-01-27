@@ -2,6 +2,7 @@
 comment0.params=
 comment0.target=ClockStore()
 comment1.params=
-comment1.target=java.lang.String\ toString()
-comment1.text=public\ int\ mostSeconds()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ int\ total\=0;\n\ \ \ \ \ \ \ \ int\ newtotal\=0;\n\ \ \ \ \ \ \ \ for(int\ i\=0;i<clockInStock.length;i++)\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ Clock\ ClockA\=clockInStock[i];\n\ \ \ \ \ \ \ \ \ \ \ \ ClockA.totalSeconds(clockInStock[i]);\n\ \ \ \ \ \ \ \ \ \ \ \ if(total>newtotal)\n\ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\=newtotal;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ return\ newtotal;\n}
-numComments=2
+comment1.target=int\ mostSeconds()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3
