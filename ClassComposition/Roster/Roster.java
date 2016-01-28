@@ -14,13 +14,24 @@ public class Roster
 
     public Student findStudentWithMaxGPA()
     {
+        Student HighestStudent;
         int MaxGPA=0;
         for(int i=0;i<Students.length;i++)
         {
-            if(Students[i].GPA>MaxGPA)
+            Students[i].getGPA()
+            if(f>MaxGPA)
             {
+                MaxGPA=Students[i].GPA;
+                HighestStudent=Students[i];
             }
         }
-        return
+        return HighestStudent;
+    }
+    
+    public String toString()
+    {
+        String ouput=new String();
+        output= findStudentWithMaxGPA();
+        return output;
     }
 }

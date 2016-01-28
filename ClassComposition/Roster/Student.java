@@ -21,6 +21,10 @@ public class Student
         this.GPA=GPA;
     }//end zero argument
 
+    public double getGPA()
+    {
+        return GPA;
+    }
     // toString()
     public String toString()
     {
@@ -28,7 +32,7 @@ public class Student
         output="Student Profile:"+"\n"+
                 "First Name:"+first+"\n"+
                 "Last Name:"+last+"\n"+
-                "Average GPA:"+GPA+"\n";
+                "Highest GPA:"+GPA+"\n";
         return output;
     }//end to String
 }//end of class Student
