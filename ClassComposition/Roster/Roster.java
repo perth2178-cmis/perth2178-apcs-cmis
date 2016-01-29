@@ -1,6 +1,8 @@
 public class Roster
 {
     private Student[] Students=new Student[3];
+    private String HighestStudent;
+    private double MaxGPA=0;
 
     public Roster()
     {
@@ -12,17 +14,16 @@ public class Roster
         Students[2]=s3;
     }
 
-    public Student findStudentWithMaxGPA()
+    public String findStudentWithMaxGPA()
     {
-        Student HighestStudent;
-        int MaxGPA=0;
         for(int i=0;i<Students.length;i++)
         {
-            Students[i].getGPA()
-            if(f>MaxGPA)
+            double GPA= Students[i].getGPA();
+            String Name= Students[i].getName();
+            if(GPA>MaxGPA)
             {
-                MaxGPA=Students[i].GPA;
-                HighestStudent=Students[i];
+                MaxGPA=GPA;
+                HighestStudent=Name;
             }
         }
         return HighestStudent;
@@ -30,7 +31,7 @@ public class Roster
     
     public String toString()
     {
-        String ouput=new String();
+        String output=new String();
         output= findStudentWithMaxGPA();
         return output;
     }

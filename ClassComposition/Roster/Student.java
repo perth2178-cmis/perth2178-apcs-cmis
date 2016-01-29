@@ -25,6 +25,11 @@ public class Student
     {
         return GPA;
     }
+    
+    public String getName()
+    {
+        return first+"\n"+last;
+    }
     // toString()
     public String toString()
     {
