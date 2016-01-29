@@ -2,19 +2,21 @@ public class MyPod
 {
     private String color;
     private int memory;
-    private String[] SongLibrary;
+    private String[] SongLibrary = new String[3];
 
     public MyPod()
     {
         color = new String("Green");
         memory = 16;
-        this.SongLibrary = {"Adventure of a Lifetime","Crystalized","Shoot to Thrill"};
+        this.SongLibrary[0] = "Adventure of a Lifetime";
+        this.SongLibrary[1] = "Crystalized";
+        this.SongLibrary[2] = "Shoot to Thrill";
     }
 
     public MyPod(String color, int memory)
     {
-        this.color= new String(color);
-        this.memory=memory; 
+        this.color = new String(color);
+        this.memory = memory; 
     }
 
     public String toString()
