@@ -1,11 +1,11 @@
 import java.util.ArrayList;
-public class MyPod
+public class MyPod2
 {
     private String color;
     private int memory;
     private ArrayList<String> SongLibrary = new ArrayList();
 
-    public MyPod()
+    public MyPod2()
     {
         color = new String("Green");
         memory = 16;
@@ -14,7 +14,7 @@ public class MyPod
         SongLibrary.add("Shoot to Thrill");
     }
 
-    public MyPod(String color, int memory, String Song1, String Song2, String Song3)
+    public MyPod2(String color, int memory, String Song1, String Song2, String Song3)
     {
         this.color= new String(color);
         this.memory=memory; 

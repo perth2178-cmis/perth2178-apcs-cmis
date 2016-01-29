@@ -2,9 +2,9 @@ public class MyPodDriver
 {
    public static void main(String[] args)
    {
-       MyPod pod1=new MyPod();
-       MyPod pod2=new MyPod("Silver",32);
-       System.out.println(pod1);
-       System.out.println();
+       MyPod MyPod=new MyPod();
+       MyPod CarPod=new MyPod("Silver",32,"Neopolitan Dream","Numa Numa","Dirty Paws");
+       System.out.println(MyPod);
+       System.out.println(CarPod);
     }
 }
