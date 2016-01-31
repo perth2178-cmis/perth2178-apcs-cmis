@@ -1,2 +1,6 @@
 #BlueJ class context
-numComments=0
+comment0.params=newStudent
+comment0.target=void\ addStudent(Student)
+comment1.params=last
+comment1.target=void\ dropStudent(java.lang.String)
+numComments=2
