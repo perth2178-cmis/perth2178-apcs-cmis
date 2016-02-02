@@ -18,6 +18,7 @@ public class Array2D2
             }
         }
 
+        i=1;
         for(int a=0;a<rowsum.length;a++)
         {
             for(int c=0;c<grid[0].length;c++)
@@ -28,6 +29,18 @@ public class Array2D2
             }
         }
 
+        i=1;
+        for(int c=0;c<grid[0].length;c++)
+        {
+            for(int r=0;r<grid.length;r++)
+            {
+                colsum[c]=colsum[c]+i;
+                i=i+5;
+            }
+            i=i+2-16;
+        }
+        
+        i=1;
         for(int[] r:grid)
         {
             for(int num:r)
@@ -36,12 +49,15 @@ public class Array2D2
             }
             System.out.println("\n");
         }
-        
+
         for(int a=0;a<rowsum.length;a++)
         {
-            System.out.println(rowsum[a]);
+            System.out.println("Row "+(a+1)+": "+rowsum[a]);
         }
-        System.out.println(colsum);
+        for(int a=0;a<colsum.length;a++)
+        {
+            System.out.println("Column "+(a+1)+": "+colsum[a]);
+        }
         System.out.println(totalsum);
     }
 }
