@@ -2,15 +2,9 @@
 objectbench.height=76
 objectbench.width=686
 package.editor.height=400
-<<<<<<< HEAD
-package.editor.width=588
-package.editor.x=596
-package.editor.y=57
-=======
 package.editor.width=560
-package.editor.x=886
+package.editor.x=888
 package.editor.y=0
->>>>>>> 81ea18c30ffbc5e3fb08f554a5320f07210cf1c2
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -19,9 +13,9 @@ project.charset=UTF-8
 target1.editor.height=700
 target1.editor.width=900
 target1.editor.x=700
-target1.editor.y=175
+target1.editor.y=146
 target1.height=50
-target1.name=Array2D2
+target1.name=Array2D3
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
