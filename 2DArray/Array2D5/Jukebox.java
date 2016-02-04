@@ -1,6 +1,6 @@
 public class Jukebox
 {
-    MySong[][] songList= new MySong[2][3];
+    MySong[][] songList= new MySong[3][4];
 
     public Jukebox()
     {
@@ -11,7 +11,7 @@ public class Jukebox
         songList[1][0] = new MySong( "Sing a Song", 1 );
         songList[1][1] = new MySong( "Baba O'Riley", 5 );
         songList[1][2] = new MySong( "Jumper", 4 );
-        songList[1][3] = new MySong( "Car Wash", 3 );
+        songList[1][3] = new MySong( "Grease Lightning", 3 );
         songList[2][0] = new MySong( "Kung Fu Fighting", 2 );
         songList[2][1] = new MySong( "Right as Rain", 4 );
         songList[2][2] = new MySong( "Beat It", 5 );
