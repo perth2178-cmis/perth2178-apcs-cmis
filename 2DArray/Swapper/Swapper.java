@@ -2,16 +2,16 @@ public class Swapper
 {
     public static void main(String[] args)
     {
-        int[][] grid = new int[][] {{9, 7, 2, 5, 7, 9, 7, 5, 8, 5},
-                                                {4 ,8 ,1, 0, 7, 5, 3, 6, 2, 7},
-                                                {0, 0, 5, 6, 7, 5, 6, 6, 4, 7},
-                                                {5, 1,6 ,2 ,2 ,2 ,7 ,9 ,1 ,9},
-                                                {7, 0, 8, 9, 7, 0, 4, 3, 8, 6},
-                                                {1 ,7 ,5 ,6, 3, 2, 9, 3, 5, 3},
-                                                {5 ,3 ,1, 4 ,9 ,9 ,1 ,3 ,4 ,8},
-                                                { 5 ,6 ,9 ,9 ,0 ,8 ,0 ,3 ,9 ,3},
-                                                {1 ,7, 4, 8, 3, 1, 7, 2, 1, 5},
-                                                {1, 0, 3, 6, 3, 0, 8, 3, 3, 6}};
+        int[][] grid = new int[][] {{9, 0, 2, 5, 0, 9, 0, 5, 8, 5},
+                                    {4, 8, 1, 7, 0, 5, 3, 6, 2, 0},
+                                    {7, 7, 5, 6, 0, 5, 6, 6, 4, 0},
+                                    {5, 1, 6, 2, 2, 2, 0, 9, 1, 9},
+                                    {0, 7, 8, 9, 0, 7, 4, 3, 8, 6},
+                                    {1, 0, 5, 6, 3, 2, 9, 3, 5, 3},
+                                    {5, 3, 1, 4, 9, 9, 1, 3, 4, 8},
+                                    {5, 6, 9, 9, 7, 8, 7, 3, 9, 3},
+                                    {1, 0, 4, 8, 3, 1, 0, 2, 1, 5},
+                                    {1, 7, 3, 6, 3, 7, 8, 3, 3, 6}};
         int[] rowproduct=new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         int[] colproduct=new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         int highestrow=0;
@@ -29,7 +29,6 @@ public class Swapper
                 }
             }
         }
-
         for(int c=0;c<grid[0].length;c++)
         {
             for(int r=0;r<colproduct.length;r++)
@@ -58,7 +57,7 @@ public class Swapper
                 cvalue=i;
             }
         }
-        grid[rvalue][cvalue]=detect;
+        detect=grid[rvalue][cvalue];
         for(int r=0;r<rowproduct.length;r++)
         {
             for(int c=0;c<grid[0].length;c++)
@@ -67,17 +66,10 @@ public class Swapper
                 {
                     grid[r][c]=0;
                 }
-                if(grid[r][c]==0)
+                else if(grid[r][c]==0)
                 {
                     grid[r][c]=detect;
                 }
-            }
-        }
-        
-        for(int r=0;r<grid.length;r++)
-        {
-            for(int c=0;c<grid[0].length;c++)
-            {
                 System.out.print(grid[r][c]+"\t");
             }
             System.out.print("\n");

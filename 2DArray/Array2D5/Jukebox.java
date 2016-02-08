@@ -1,6 +1,8 @@
 public class Jukebox
 {
     MySong[][] songList= new MySong[3][4];
+    int rvalue=0;
+    int cvalue=0;
 
     public Jukebox()
     {
@@ -17,11 +19,17 @@ public class Jukebox
         songList[2][2] = new MySong( "Beat It", 5 );
         songList[2][3] = new MySong( "Bust a Move", 4 );
     }
+    
+    public void randomSong()
+    {
+        ravlue=((int) Math.random()*3);
+        cvalue=((int) Math.random()*4);
+    }
 
     public String toString()
     {
         String output=new String();
-        for(int r=0;r<songList.length;r++)
+        for(MySong[] r: songList[])
         {
             for(int c=0;c<songList[0].length;c++)
             {
@@ -29,6 +37,7 @@ public class Jukebox
             }
             output+="\n";
         }
+        output="Random Song: "+songList[rvalue][cvalue];
         return output;
     }
 }
