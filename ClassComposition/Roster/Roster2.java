@@ -1,22 +1,37 @@
 import java.util.ArrayList;
 public class Roster2
 {
-    public ArrayList myStudents=new ArrayList();
-
-    public void addStudent(Student newStudent)
+    private ArrayList<Student> StudentList= new ArrayList<Student>();
+    public Roster2()
     {
-        myStudents.add(newStudent);
+        StudentList.add(new Student("Ross","Clip",3.6)	);
     }
 
-    public void dropStudent(String last)
+    public void addStudent ( Student newStudent )
     {
-        for(int i=0;i<myStudents.size;i++)
+        StudentList.add(newStudent);
+    }
+
+    public void dropStudent ( String name ) 
+    {
+        for(int i=0; i<StudentList.size(); i++)
         {
-            if(myStudent.get(i).equals(last))
+            if(StudentList.get(i).getName().equals(name))
             {
-                myStudents.remove(i);
+                StudentList.remove(StudentList.get(i));
             }
-        }	
+        }
+
     }
 
+    public String toString()
+    {
+        String output =new String();
+        for (Student Student : StudentList)
+        {
+            output+= Student+"\n";
+        }
+        return output;
+
+    }//toString
 }

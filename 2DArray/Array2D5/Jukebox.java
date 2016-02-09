@@ -26,7 +26,7 @@ public class Jukebox
         cvalue=((int) Math.random()*4);
     }
 
-    public String toString()
+    public MySong toMySong()
     {
         String output=new String();
         for(MySong[] r: songList[])
