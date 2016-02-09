@@ -2,5 +2,8 @@
 comment0.params=
 comment0.target=Jukebox()
 comment1.params=
-comment1.target=java.lang.String\ toString()
-numComments=2
+comment1.target=MySong\ randomSong()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=public\ MySong\ playSongofRating(int\ rating)\n\ \ \ \ {\n\ \ \ \ \ \ \ \ MySong\ selectsong\=new\ MySong\n\ \ \ \ \ \ \ \ for(int\ r\=0;r<songList.length;r++)\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ for(int\ c\=0;c<songList[0].length;c++)\n\ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(songList[i].getRating\=\=rating)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ return\ selectsong\n}
+numComments=3
