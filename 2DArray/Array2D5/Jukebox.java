@@ -27,16 +27,16 @@ public class Jukebox
         return songList[rvalue][cvalue];
     }
     
-    public MySong playSongofRating(int rating)
+    public MySong[] playSongofRating(int rating)
     {
-        MySong selectsong=new MySong
+        MySong[] selectsong=new MySong[]
         for(int r=0;r<songList.length;r++)
         {
             for(int c=0;c<songList[0].length;c++)
             {
                 if(songList[i].getRating==rating)
                 {
-                    
+                    selectsong[i]=songList[i];
                 }
             }
         }
