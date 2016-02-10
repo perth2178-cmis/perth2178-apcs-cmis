@@ -26,7 +26,7 @@ public class MySong
     public String toString()
     {
         String output=new String();
-        output="Name: "+name+" Rating: "+rating;
+        output="Name: "+name+"\tRating: "+rating;
         return output;
     }
 }
