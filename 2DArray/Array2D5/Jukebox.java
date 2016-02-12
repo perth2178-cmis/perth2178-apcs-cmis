@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Jukebox
 {
     MySong[][] songList= new MySong[3][4];
@@ -22,28 +23,26 @@ public class Jukebox
     
     public MySong randomSong()
     {
-        rvalue=((int) Math.random()*(3));
-        cvalue=((int) Math.random()*(4));
+        rvalue=(int) (Math.random()*3);
+        cvalue=(int) (Math.random()*4);
         return songList[rvalue][cvalue];
     }
     
-    /*public MySong[] playSongofRating(int rating)
+    public ArrayList<MySong> playSongofRating(int rating)
     {
-        MySong[] selectsong=new MySong[5];
-        int select;
+        ArrayList<MySong> selectsong=new ArrayList();
         for(int r=0;r<songList.length;r++)
         {
             for(int c=0;c<songList[0].length;c++)
             {
-                select=songList[r][c].getRating;
-                if(select==rating)
+                if(songList[r][c].getRating()==rating)
                 {
-                    selectsong[i]=songList[i];
+                    selectsong.add(songList[r][c]);
                 }
             }
         }
         return selectsong;
-    }*/
+    }
 
     public String toString()
     {

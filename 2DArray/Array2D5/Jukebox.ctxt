@@ -3,7 +3,8 @@ comment0.params=
 comment0.target=Jukebox()
 comment1.params=
 comment1.target=MySong\ randomSong()
-comment2.params=
-comment2.target=java.lang.String\ toString()
-comment2.text=public\ MySong[]\ playSongofRating(int\ rating)\n\ \ \ \ {\n\ \ \ \ \ \ \ \ MySong[]\ selectsong\=new\ MySong[5];\n\ \ \ \ \ \ \ \ int\ select;\n\ \ \ \ \ \ \ \ for(int\ r\=0;r<songList.length;r++)\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ for(int\ c\=0;c<songList[0].length;c++)\n\ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ select\=songList[r][c].getRating;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(select\=\=rating)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectsong[i]\=songList[i];\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ return\ selectsong;\n}
-numComments=3
+comment2.params=rating
+comment2.target=java.util.ArrayList\ playSongofRating(int)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

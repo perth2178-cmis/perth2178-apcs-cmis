@@ -5,7 +5,7 @@ public class JukeboxDriver
         Jukebox Playlist = new Jukebox();
         System.out.println(Playlist);
         System.out.println("Random song: " + Playlist.randomSong());
-        System.out.println("Songs with the rating of : ");
+        System.out.println("Songs with the rating of : "+Playlist.playSongofRating(5)+"\n");
     }
 }
 
