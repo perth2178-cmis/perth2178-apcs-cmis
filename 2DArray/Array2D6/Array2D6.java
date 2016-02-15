@@ -3,24 +3,23 @@ public class Array2D6
 {
     public static void main(String [] args)
     {
-        String lastName = JOptionPane.showInputDialog( "What is your lastname?");
-        String password = JOptionPane.showInputDialog( "What is your password?");
-        String convertLastName = lastName.toLowerCase();
-        String convertPassword = password.toLowerCase();
+        String LastName = JOptionPane.showInputDialog( "Please enter your lastname?");
+        String Password = JOptionPane.showInputDialog( "Please enter your password?");
+        String ConvertName = LastName.toLowerCase();
+        String ConvertPass = Password.toLowerCase();
         int pass = 0;
-
         while(pass >= 0)
         {
-            pass = convertPassword.indexOf(convertLastName);
+            pass = ConvertPass.indexOf(ConvertName);
             if(pass >= 0)
             {
-                convertPassword = JOptionPane.showInputDialog( "What is your password?").toLowerCase();
+                ConvertPass = JOptionPane.showInputDialog( "Password not excepted, Please enter a new password.").toLowerCase();
             }
             else
             {
-                System.out.print("You have successfully logged in");
+                System.out.println("Password excepted, you have successfully logged in");
             }
         }
-
+        System.out.println(LastName+" : "+Password);
     }
 }
