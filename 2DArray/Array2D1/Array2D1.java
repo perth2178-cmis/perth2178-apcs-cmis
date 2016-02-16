@@ -27,7 +27,7 @@ public class Array2D1
             {
                 if(grid[r][c]==5)
                 {
-                   System.out.print(r+","+c); 
+                   System.out.print(r+","+c+" "); 
                 }
             }
         }

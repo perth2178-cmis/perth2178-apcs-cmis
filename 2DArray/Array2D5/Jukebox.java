@@ -23,8 +23,8 @@ public class Jukebox
     
     public MySong randomSong()
     {
-        rvalue=(int) (Math.random()*3);
-        cvalue=(int) (Math.random()*4);
+        rvalue=(int) (Math.random()*songList.length);
+        cvalue=(int) (Math.random()*songList[0].length);
         return songList[rvalue][cvalue];
     }
     
