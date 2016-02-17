@@ -11,6 +11,6 @@ public class MyDevice
 
     public String toString()
     {
-        return String.format("Name: %s\nType: %s", name, devicetype);
+        return String.format("Name: %s\nType: %s\n", name, devicetype);
     }
 }
