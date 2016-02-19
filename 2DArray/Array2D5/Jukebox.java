@@ -31,4 +31,9 @@ public class Jukebox
         }
         return output;
     }
+    
+    public String toString()
+    {
+        
+    }
 }
