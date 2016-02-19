@@ -2,5 +2,9 @@
 comment0.params=
 comment0.target=Jukebox()
 comment1.params=
-comment1.target=java.lang.String\ toString()
-numComments=2
+comment1.target=MySong\ randomSong()
+comment2.params=rating
+comment2.target=java.util.ArrayList\ playSongofRating(int)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

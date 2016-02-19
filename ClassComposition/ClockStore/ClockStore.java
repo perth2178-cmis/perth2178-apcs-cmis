@@ -17,21 +17,23 @@ public class ClockStore
     {
         int total=0;
         int newtotal=0;
+        int index=0;
         for(int i=0;i<clockInStock.length;i++)
         {
             Clock ClockA=clockInStock[i];
-            ClockA.totalSeconds(clockInStock[i]);
-            if(total>newtotal)
+            if(ClockA.totalSeconds(clockInStock[i])>newtotal)
             {
-                total=newtotal;
+                newtotal=ClockA.totalSeconds(clockInStock[i]);
+                index=i+1;
             }
         }
-        return newtotal;
+        return index;
     }
     
     public String toString()
     {
         String output=new String();
+        output="The clock with the most seonds is clock "+mostSeconds()+".\n";
         for(Clock clock : clockInStock)
         {
             output+=clock+"\n";

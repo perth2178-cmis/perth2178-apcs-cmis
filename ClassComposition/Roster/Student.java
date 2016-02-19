@@ -28,7 +28,7 @@ public class Student
     
     public String getName()
     {
-        return first+"\n"+last;
+        return last;
     }
     // toString()
     public String toString()

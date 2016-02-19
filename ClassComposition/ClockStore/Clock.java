@@ -23,7 +23,7 @@ public class Clock
         time=new String(hour+":"+min+":"+sec);
     }
 
-    public void totalSeconds(Clock seconds)
+    public int totalSeconds(Clock seconds)
     {
         int sechour=0;
         int secmin=0;
@@ -31,12 +31,13 @@ public class Clock
         sechour=hour*3600;
         secmin=min*60;
         total=sechour+secmin+sec;
+        return total;
     }
 
     public String toString()
     {
         String output=new String();
-        output="The time is now "+hour+":"+min+":"+sec;
+        output="The time on this clock is now "+hour+":"+min+":"+sec;
         return output;
     }//end toString
 }//end class Clock
