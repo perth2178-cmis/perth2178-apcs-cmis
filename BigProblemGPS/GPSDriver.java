@@ -1,62 +1,94 @@
 import java.util.ArrayList;
 public class GPSDriver
 {
-    public static void main (String args[])
-    {
-        GPSSoftware trail = new GPSSoftware();
-        System.out.println("\nTrail A");
-        System.out.println(trail);
-        System.out.println("length " + trail.getLength());
-        System.out.println("difficulty " + trail.Difficulty(0, trail.Trail.size()-1));
-        System.out.println("level " + trail.Level(0, trail.Trail.size()-1));
-        System.out.println("difficulty 3-4 " + trail.Difficulty(3, 4));
-        System.out.println("level 5-6 " + trail.Level(5, 6));
-
-        trail.addMarker(new Marker(13,100)	);
-        System.out.println("\nTrail B");
-        System.out.println(trail); 
-        System.out.println("length " + trail.getLength());
-        System.out.println("difficulty " + trail.Difficulty(0, trail.Trail.size()-1));
-        System.out.println("level " + trail.Level(0, trail.Trail.size()-1));
-        System.out.println("difficulty 3-4 " + trail.Difficulty(3, 4));
-        System.out.println("level 5-6 " + trail.Level(5, 6));
-
-        ArrayList<Marker> randomMarkers = new ArrayList<Marker>();
-        randomMarkers.add(new Marker(0,10));
-        randomMarkers.add(new Marker(1,10));
-        randomMarkers.add(new Marker(2,10)); 
-        randomMarkers.add(new Marker(3,10));
-        randomMarkers.add(new Marker(4,10));
-        randomMarkers.add(new Marker(5,10));
-        randomMarkers.add(new Marker(6,10));
-        randomMarkers.add(new Marker(7,10));
-        randomMarkers.add(new Marker(8,10));
-        GPSSoftware PlainTrail = new GPSSoftware(randomMarkers);
-        System.out.println("\nPlainTrail");
-        System.out.println(PlainTrail); 
-        System.out.println("length " + PlainTrail.getLength());
-        System.out.println("difficulty " + trail.Difficulty(0, trail.Trail.size()-1));
-        System.out.println("level " + trail.Level(0, trail.Trail.size()-1));
-        System.out.println("difficulty 3-4 " + trail.Difficulty(3, 4));
-        System.out.println("level 5-6 " + trail.Level(5, 6));
-
-        ArrayList<Marker> newMarkers = new ArrayList<Marker>();
-        newMarkers.add(new Marker(0,100));
-        newMarkers.add(new Marker(1,200));
-        newMarkers.add(new Marker(2,300)); 
-        newMarkers.add(new Marker(3,400));
-        newMarkers.add(new Marker(4,500));
-        newMarkers.add(new Marker(5,600));
-        newMarkers.add(new Marker(6,700));
-        newMarkers.add(new Marker(7,800));
-        newMarkers.add(new Marker(8,900));
-        GPSSoftware MountainTrail = new GPSSoftware(newMarkers);
-        System.out.println("\nMountainTrail");
-        System.out.println(MountainTrail);
-        System.out.println("length " + MountainTrail.getLength());
-        System.out.println("difficulty " + trail.Difficulty(0, trail.Trail.size()-1));
-        System.out.println("level " + trail.Level(0, trail.Trail.size()-1));
-        System.out.println("difficulty 3-4 " + trail.Difficulty(3, 4));
-        System.out.println("level 5-6 " + trail.Level(5, 6));
-    }
+       public static void main(String[] args)
+       {
+        ArrayList<Integer> markers1 = new ArrayList<Integer>();
+        ArrayList<Integer> markers2 = new ArrayList<Integer>();
+        
+        markers1.add(90);   //0
+        markers1.add(80);   //1
+        markers1.add(90);   //2
+        markers1.add(100);  //3
+        markers1.add(120);  //4
+        markers1.add(100);  //5
+        markers1.add(80);   //6
+        markers1.add(110);  //7
+        markers1.add(150);  //8
+        markers1.add(160);  //9
+        markers1.add(160);  //10
+        markers1.add(100);  //11
+        markers1.add(205);  //12
+        
+        markers2.add(110);  //0
+        markers2.add(115);  //1
+        markers2.add(120);  //2
+        markers2.add(115);  //3
+        markers2.add(105);  //4
+        markers2.add(100);  //5
+        markers2.add(100);  //6
+        markers2.add(100);  //7
+        markers2.add(105);  //8
+        markers2.add(110);  //9
+        markers2.add(100);  //10
+        markers2.add(105);  //11
+        markers2.add(110);  //12
+        
+        GPS carGPS =new GPS ();
+        GPS vanGPS =new GPS (markers1);
+        GPS busGPS =new GPS (markers2);
+        GPS[] allGPS ={carGPS, vanGPS, busGPS};
+        
+        System.out.println(carGPS);
+        System.out.println(vanGPS);
+        System.out.println(busGPS);
+    
+        for(int i = 0; i < allGPS.length;i++)
+        {
+            if(allGPS[i].LevelTrailSegment(0,12))
+            {
+                System.out.println("Trail "+(i+1)+" is level.");
+            }
+            else
+            {
+                System.out.println("Trail "+(i+1)+" is not level.");
+            }
+        }
+        
+        for(int i = 0; i < allGPS.length;i++)
+        {
+            if(allGPS[i].LevelTrailSegment(5,6))
+            {
+                System.out.println("This segment of trail "+(i+1)+" is level.");
+            }
+            else
+            {
+                System.out.println("This segment of trail "+(i+1)+" is not level.");
+            }
+        }
+        
+        for(int i = 0; i < allGPS.length;i++)
+        {
+            if(allGPS[i].Difficult(0,12))
+            {
+                System.out.println("Trail "+(i+1)+" is difficult.");
+            }
+            else
+            {
+                System.out.println("Trail "+(i+1)+" is not difficult.");
+            }
+        }
+        
+        for(int i = 0; i < allGPS.length;i++)
+        {
+            if(allGPS[i].Difficult(11,12))
+            {
+                System.out.println("This segment of trail "+(i+1)+"  is difficult.");
+            }
+            else
+            {
+                System.out.println("This segment of trail "+(i+1)+"  is not difficult.");
+            }
+        }
+     }
 }

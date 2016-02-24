@@ -1,6 +1,6 @@
 public class AsteroidMan extends SuperHero
 {
-  public AsteroidMan()
+    public AsteroidMan()
     {
         setSuitColor("Brownish Red");
         setCape(false);

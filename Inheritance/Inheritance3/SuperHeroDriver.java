@@ -7,5 +7,6 @@ public class SuperHeroDriver
         heroes.add(AsteroidMan());
         heroes.add(FriedEggMan());
         heroes.add(OnePunchMan());
+        System.out.println(heroes);
     }
 }

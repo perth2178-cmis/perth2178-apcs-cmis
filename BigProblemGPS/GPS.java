@@ -35,32 +35,32 @@ public class GPS
         return markers.size();
     }
     
-    public boolean isLevelTrailSegment(int begin, int end)
+    public boolean LevelTrailSegment(int begin, int end)
     {
-        boolean isLevel = true;
+        boolean Level = true;
         
         if(markers.get(begin) != markers.get(end))
         {
-           isLevel = false; 
+           Level = false; 
         }
         else
         {
              for(int i = begin; i < end; i++)
              {
-                if(markers.get(begin) - markers.get(i) > 10 || markers.get(end) - markers.get(i) > 10)
+                if(markers.get(begin) - markers.get(end) > 10 || markers.get(i) - markers.get(i+1) > 10)
                     {
-                        isLevel = false;
+                        Level = false;
                     }
              }
         }
-        return isLevel;
+        return Level;
     }
     
-    public boolean isDifficult(int begin, int end)
+    public boolean Difficult(int begin, int end)
     {
-        boolean isDifficult = false;
+        boolean Difficult = false;
         int netGain = 0;
-        if(isLevelTrailSegment(begin, end) == false)
+        if(LevelTrailSegment(begin, end) == false)
         {
             for(int i = begin; i < end; i++)
             {
@@ -70,12 +70,12 @@ public class GPS
                     netGain += calc;
                     if(netGain >= 100)
                     {
-                        isDifficult = true;
+                        Difficult = true;
                     }
                 }
             }
         }
-        return isDifficult;
+        return Difficult;
     }
     
     public String toString()
@@ -84,7 +84,7 @@ public class GPS
         int counter = 0;
         for ( int s : markers)
         {
-            output += counter + " : " + s + "\n" ;
+            output += counter + ":\t" + s + "\n" ;
             counter ++;
         }
         return output;
