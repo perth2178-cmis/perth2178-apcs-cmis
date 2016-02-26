@@ -2,7 +2,7 @@ import java.util.ArrayList;
 public class GPS
 {
     private ArrayList<Integer> markers = new ArrayList<Integer>();
-    
+
     public GPS()
     {
         markers.add(100);   //0
@@ -19,43 +19,43 @@ public class GPS
         markers.add(90);    //11
         markers.add(100);   //12
     }
-    
+
     public GPS( ArrayList<Integer> markers )
     {
         this.markers = markers;
     }
-    
+
     public void addMarker(int marker)
     {
         markers.add(marker);
     }
-    
+
     public int getLength()
     {
         return markers.size();
     }
-    
+
     public boolean LevelTrailSegment(int begin, int end)
     {
         boolean Level = true;
-        
+
         if(markers.get(begin) != markers.get(end))
         {
-           Level = false; 
+            Level = false; 
         }
         else
         {
-             for(int i = begin; i < end; i++)
-             {
+            for(int i = begin; i < end; i++)
+            {
                 if(markers.get(begin) - markers.get(end) > 10 || markers.get(i) - markers.get(i+1) > 10)
-                    {
-                        Level = false;
-                    }
-             }
+                {
+                    Level = false;
+                }
+            }
         }
         return Level;
     }
-    
+
     public boolean Difficult(int begin, int end)
     {
         boolean Difficult = false;
@@ -68,16 +68,17 @@ public class GPS
                 if(calc > 0)
                 {
                     netGain += calc;
-                    if(netGain >= 100)
-                    {
-                        Difficult = true;
-                    }
+
                 }
             }
         }
+        if(netGain >= 100)
+        {
+            Difficult = true;
+        }
         return Difficult;
     }
-    
+
     public String toString()
     {
         String output = new String("Index : Elevation \n");

@@ -1,34 +1,46 @@
 public abstract class SuperHero
-   {
-   private String suitColor;
-   private boolean hasCape;
+{
+    private String Name;
+    private String suitColor;
+    private boolean hasCape;
 
-   public SuperHero()
-      {
-      this.suitColor = new String();
-      this.hasCape = false;
-      } // end zero-arg constructor SuperHero
+    public SuperHero()
+    {
+        this.Name = new String();
+        this.suitColor = new String();
+        this.hasCape = false;
+    } // end zero-arg constructor SuperHero
+    
+    public void setName(String name)
+    {
+        this.Name = new String( name );
+    }
+    
+    public String getName()
+    {
+       return Name; 
+    }
 
-   public void setSuitColor(String suitColor)
-      {
-      this.suitColor = new String( suitColor );
-      } // end method setSuitColor
-      
-   public String getSuitColor()
-      {
-      return suitColor;	
-      } // end method getSuitColor
-   
-   public void setCape(boolean cape)
-      {
-      this.hasCape = cape;	
-      } // end method setCape
-      
-   public boolean isCaped()
-      {
-      return hasCape;	
-      } // end method isCaped
-      
-   public abstract String motto();   
+    public void setSuitColor(String suitColor)
+    {
+        this.suitColor = new String( suitColor );
+    } // end method setSuitColor
 
-   } // end abstract class SuperHero
+    public String getSuitColor()
+    {
+        return suitColor;	
+    } // end method getSuitColor
+
+    public void setCape(boolean cape)
+    {
+        this.hasCape = cape;	
+    } // end method setCape
+
+    public boolean isCaped()
+    {
+        return hasCape;	
+    } // end method isCaped
+
+    public abstract String motto();   
+
+} // end abstract class SuperHero

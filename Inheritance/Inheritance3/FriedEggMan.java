@@ -2,6 +2,7 @@ public class FriedEggMan extends SuperHero
 {
     public FriedEggMan()
     {
+        setName("Fried Egg Man");
         setSuitColor("White");
         setCape(true);
     }
