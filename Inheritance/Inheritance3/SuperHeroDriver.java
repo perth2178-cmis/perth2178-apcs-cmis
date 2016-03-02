@@ -7,14 +7,51 @@ public class SuperHeroDriver
         heroes.add(new AsteroidMan());
         heroes.add(new FriedEggMan());
         heroes.add(new OnePunchMan());
-        
+
         SuperHero[][] cappedhero= new SuperHero[3][3];
-        
+
         for(SuperHero hero : heroes)
         {
-            System.out.println(hero.getName()+" the hero in "+hero.getSuitColor()+". It is "+hero.isCaped()+" that he has a cape. '"+hero.motto()+"'");
+            System.out.println(hero);
+            
         }
         
-        
+        System.out.println();
+        for(int i=0;i<heroes.size();i++)
+        {
+            for(int r=0;r<cappedhero.length;r++)
+            {
+                for(int c=0;c<cappedhero[0].length;c++)
+                {
+                    if(heroes.get(i).isCaped())
+                    {
+                        cappedhero[r][c]=heroes.get(i);
+                        SuperHero toremove=heroes.get(i);
+                        heroes.remove(toremove);
+                        
+                    }
+                    if(i>0)
+                        {
+                            i--;
+                        }
+                }
+            }
+        }
+
+        for(int r=0;r<cappedhero.length;r++)
+        {
+            for(int c=0;c<cappedhero[0].length;c++)
+            {
+                System.out.print(cappedhero[r][c]+"    ");
+            }
+            System.out.print("\n");
+        }
+
+        System.out.println();
+        for(SuperHero hero : heroes)
+        {
+            System.out.println(hero);
+        }
+
     }
 }
