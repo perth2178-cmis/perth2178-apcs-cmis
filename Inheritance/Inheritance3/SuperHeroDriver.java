@@ -8,7 +8,7 @@ public class SuperHeroDriver
         heroes.add(new FriedEggMan());
         heroes.add(new OnePunchMan());
 
-        SuperHero[][] cappedhero= new SuperHero[3][3];
+        String[][] cappedhero= new String[3][3];
 
         for(SuperHero hero : heroes)
         {
@@ -25,7 +25,7 @@ public class SuperHeroDriver
                 {
                     if(heroes.get(i).isCaped())
                     {
-                        cappedhero[r][c]=heroes.get(i);
+                        cappedhero[r][c]=heroes.get(i).getName();
                         SuperHero toremove=heroes.get(i);
                         heroes.remove(toremove);
                         
