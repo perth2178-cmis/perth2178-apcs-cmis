@@ -7,9 +7,10 @@ public class MyDevicesDriver
       MyPod pod = new MyPod( 32, "Black" );
       MyPhone phone = new MyPhone( 16, "Blue", "AT&T" );
       
-      ArrayList<MyDevice> inventory = new ArrayList<MyDevice>(); 
+      ArrayList<Connectable> inventory = new ArrayList<Connectable>(); 
       inventory.add( pod );
       inventory.add( phone );
+      inventory.add(new MyCar());
       
       for( Connectable device : inventory ) 
          {

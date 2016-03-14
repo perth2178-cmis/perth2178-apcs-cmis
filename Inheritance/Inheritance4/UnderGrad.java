@@ -1,15 +1,20 @@
 public class UnderGrad extends Student
 {
-    public UnderGrad()
+    public UnderGrad(String Name, String Major, int units)
     {
-        setName("Mark");
-        setMajor("Sociology");
-        setUnits(6);
+        setName(Name);
+        setMajor(Major);
+        setUnits(units);
     }
     
-    public int calculateTuition(int units)
+    public int calculateTuition()
     {
-        int tuition = units*250;
+        int tuition = getUnits()*250;
         return tuition;
+    }
+    
+    public String toString()
+    {
+        return super.toString();
     }
 }

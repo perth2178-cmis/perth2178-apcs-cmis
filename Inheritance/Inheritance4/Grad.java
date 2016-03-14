@@ -1,15 +1,20 @@
 public class Grad extends Student
 {
-   public Grad()
+    public Grad(String Name, String Major, int units)
     {
-        setName("Elliot");
-        setMajor("Botany");
-        setUnits(8);
+        setName(Name);
+        setMajor(Major);
+        setUnits(units);
     }
-    
-    public int calculateTuition(int units)
+
+    public int calculateTuition()
     {
-        int tuition = units*500;
+        int tuition = getUnits()*500;
         return tuition;
+    }
+
+    public String toString()
+    {
+        return super.toString();
     }
 }

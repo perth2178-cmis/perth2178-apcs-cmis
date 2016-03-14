@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=numpassenger\ cost
+comment0.target=MyCar(int,\ double)
+comment1.params=
+comment1.target=void\ connectToBluetooth()
+comment2.params=
+comment2.target=void\ applyDiscount()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

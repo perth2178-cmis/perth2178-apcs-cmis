@@ -1,15 +1,20 @@
 public class PostGrad extends Student
 {
-   public PostGrad()
+   public PostGrad(String Name, String Major, int units)
     {
-        setName("Rebecca");
-        setMajor("Zoology");
-        setUnits(8);
+        setName(Name);
+        setMajor(Major);
+        setUnits(units);
     }
     
-    public int calculateTuition(int units)
+    public int calculateTuition()
     {
-        int tuition = units*750;
+        int tuition = getUnits()*750;
         return tuition;
+    }
+    
+    public String toString()
+    {
+        return super.toString();
     }
 }

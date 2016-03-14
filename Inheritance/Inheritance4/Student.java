@@ -41,5 +41,10 @@ public abstract class Student
         return Units; 
     }
 
-    abstract public int calculateTuition(int units);
+    abstract public int calculateTuition();
+    
+    public String toString()
+    {
+        return getName() + "  " + getMajor() + "  " + calculateTuition(); 
+    }
 }
