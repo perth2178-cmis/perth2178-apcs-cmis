@@ -4,36 +4,30 @@ public class SuperHeroDriver
     public static void main(String[] args)
     {
         ArrayList<SuperHero> heroes = new ArrayList();
-        heroes.add(new AsteroidMan());
-        heroes.add(new FriedEggMan());
-        heroes.add(new OnePunchMan());
+        heroes.add(new AsteroidMan("Brownish Red"));
+        heroes.add(new FriedEggMan("White"));
+        heroes.add(new OnePunchMan("Yellow"));
 
         String[][] cappedhero= new String[3][3];
 
         for(SuperHero hero : heroes)
         {
             System.out.println(hero);
-            
         }
-        
+
         System.out.println();
-        for(int i=0;i<heroes.size();i++)
+        for(int r=0;r<cappedhero.length;r++)
         {
-            for(int r=0;r<cappedhero.length;r++)
+            for(int c=0;c<cappedhero[0].length;c++)
             {
-                for(int c=0;c<cappedhero[0].length;c++)
+                if(cappedhero[r][c] == null)
                 {
-                    if(heroes.get(i).isCaped())
-                    {
-                        cappedhero[r][c]=heroes.get(i).getName();
-                        SuperHero toremove=heroes.get(i);
-                        heroes.remove(toremove);
-                        
-                    }
-                    if(i>0)
+                    if ( e.isCaped())
                         {
-                            i--;
-                        }
+                            heroes.remove(e);
+                            cappedhero[r][c] = e;
+                            break;
+                        } 
                 }
             }
         }

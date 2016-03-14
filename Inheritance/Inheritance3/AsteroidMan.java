@@ -1,14 +1,18 @@
 public class AsteroidMan extends SuperHero
 {
-    public AsteroidMan()
+    public AsteroidMan(String SuitColor)
     {
-        setName("Asteroid Man");
-        setSuitColor("Brownish Red");
+        setSuitColor(SuitColor);
         setCape(false);
     }
 
     public String motto()
     {
         return "IMPACT!!!";
+    }
+    
+    public String toString()
+    {
+        return "Asteroid Man\t" + super.toString();
     }
 }

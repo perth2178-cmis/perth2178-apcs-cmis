@@ -46,7 +46,7 @@ public abstract class SuperHero
     public String toString()
     {
         String output=new String();
-        output=getName()+" the hero in "+getSuitColor()+". It is "+isCaped()+" that he has a cape. '"+motto()+"'";
+        output=" the hero in "+getSuitColor()+". It is "+isCaped()+" that he has a cape. '"+motto()+"'";
         return output;
     }
 } // end abstract class SuperHero
