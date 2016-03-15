@@ -10,7 +10,7 @@ public class MyDevicesDriver
       ArrayList<Connectable> inventory = new ArrayList<Connectable>(); 
       inventory.add( pod );
       inventory.add( phone );
-      inventory.add(new MyCar());
+      inventory.add(new MyCar(4,4499.99));
       
       for( Connectable device : inventory ) 
          {
