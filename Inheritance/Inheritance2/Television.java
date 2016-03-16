@@ -38,7 +38,7 @@ public class Television
    public String toString()
       {
       String output = new String();
-      output = "The Model of this tv is: " + this.model +"\tPrice: " + this.price;
+      output = "The Model of this tv is: " + this.model +"\tPrice: $" + this.price+". ";
       return output;
       } // end method toString
    } // end class Television 

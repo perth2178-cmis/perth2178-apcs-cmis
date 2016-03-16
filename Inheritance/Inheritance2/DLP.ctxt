@@ -1,4 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=DLP()
-numComments=1
+comment0.params=model\ price\ remote\ ON
+comment0.target=DLP(java.lang.String,\ double,\ java.lang.String,\ boolean)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+numComments=2
