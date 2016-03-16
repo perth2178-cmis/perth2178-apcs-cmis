@@ -1,8 +1,12 @@
 public class LCD extends Television
 {
-   public LCD()
+   public LCD(String model, double price, String remote, boolean ON)
    {
-       setModel("LCD Color");
-       setPrice(39.99);
+       super(model,price);
+    }
+    
+    public String toString()
+    {
+        return super.toString() + String.format();
     }
 }

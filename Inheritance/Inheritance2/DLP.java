@@ -1,8 +1,12 @@
 public class DLP extends Television
 {
-   public DLP()
+   public DLP(String model, double price, String remote, boolean ON)
    {
-       setModel("DLP Wide");
-       setPrice(59.99);
+       super(model,price);
+    }
+    
+    public String toString()
+    {
+        return super.toString() + String.format();
     }
 }

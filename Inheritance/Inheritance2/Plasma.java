@@ -1,8 +1,14 @@
 public class Plasma extends Television
 {
-   public Plasma()
+   public Plasma(String model, double price, String remote, boolean ON)
    {
-       setModel("Plasma Curved");
-       setPrice(79.99);
+       super(model,price);
+       this.remote=remote
+       this.ON=true;
+    }
+    
+    public String toString()
+    {
+        return super.toString() + String.format("It has");
     }
 }

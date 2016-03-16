@@ -1,8 +1,12 @@
 public class LED extends Television
 {
-    public LED()
+    public LED(String model, double price, String remote, boolean ON)
     {
-       setModel("LED Light");
-       setPrice(39.99);
+       super(model,price);
+    }
+    
+    public String toString()
+    {
+        return super.toString() + String.format();
     }
 }
