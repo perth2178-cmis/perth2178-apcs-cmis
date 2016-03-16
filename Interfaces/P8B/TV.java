@@ -1,10 +1,10 @@
 public abstract class TV
 {
     private boolean tvON;
-
-    public void setTVON(boolean on)
+    
+    TV(boolean n)
     {
-        tvON=on;
+        tvON = n ;
     }
 
     public boolean getTVON()
@@ -12,5 +12,15 @@ public abstract class TV
         return tvON;
     }
     
-    public abstract void tvType();
+    public void setTvOn(boolean n)
+    {
+        tvON =n;
+    }
+    
+    public abstract String tvType();
+    
+    public String toString()
+    {
+        return "...Am I On? " + tvON;
+    }
 }
