@@ -20,4 +20,13 @@ public class Lobster extends Prey
             turn(Greenfoot.getRandomNumber(90)-45);
         }
     }    
+    
+    public void eat()
+    {
+         Actor Lobster= getOneObjectAtOffset(0,0,Croc.class);
+        if(Lobster!=null)
+        {
+            getWorld().removeObject(Lobster);
+        }
+    }
 }
