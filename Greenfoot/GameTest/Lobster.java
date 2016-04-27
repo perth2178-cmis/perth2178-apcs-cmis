@@ -23,10 +23,10 @@ public class Lobster extends Prey
     
     public void eat()
     {
-         Actor Lobster= getOneObjectAtOffset(0,0,Croc.class);
-        if(Lobster!=null)
+        if(isTouching(Croc.class))
         {
-            getWorld().removeObject(Lobster);
+            Actor eaten=getOneIntersectingObject(Croc.class);
+            getWorld().removeObject(eaten);
         }
     }
 }

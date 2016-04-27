@@ -8,7 +8,8 @@ public class MyWorld extends World
         super(600, 400, 1);
 
     }
-    Tree[] tree= new Tree[20];
+
+    Tree[] tree= new Tree[10];
     int amount=0;
     boolean reset=false;
     public void act() 
@@ -18,15 +19,19 @@ public class MyWorld extends World
             tree[i] = new Tree();
             addObject(tree[i],Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
             amount=amount+1;
-        }    
-        if(reset=true)
+        } 
+        if(amount>10)
         {
-            for(int i=0;i<tree.length;i++)
+            reset=true;
+            if(reset=true)
             {
-                removeObject(tree[i]);
-                tree[i]=null;
+                for(int i=0;i<tree.length;i++)
+                {
+                    removeObject(tree[i]);
+                    tree[i]=null;
+                }
+                reset=false;
             }
-            reset=false;
         }
 
         Water lake = new Water();
