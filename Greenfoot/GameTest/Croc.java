@@ -21,4 +21,13 @@ public class Croc extends Predator
             turn(3);
         }
     } 
+    
+    public void eat()
+    {
+        if(isTouching(Lobster.class))
+        {
+            Actor eaten=getOneIntersectingObject(Lobster.class);
+            getWorld().removeObject(eaten);
+        }
+    }
 }
