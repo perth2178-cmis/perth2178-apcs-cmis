@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Util
+comment1.params=world\ x\ y\ x2\ y2\ cls
+comment1.target=greenfoot.Actor\ getFirstActorBetween(greenfoot.World,\ int,\ int,\ int,\ int,\ java.lang.Class)
+numComments=2

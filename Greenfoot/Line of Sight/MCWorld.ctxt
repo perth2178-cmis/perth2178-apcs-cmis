@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=MCWorld
+comment1.params=
+comment1.target=MCWorld()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ genWorld()
+comment4.params=
+comment4.target=void\ addPlayer()
+comment5.params=
+comment5.target=void\ addOverlay()
+comment6.params=block\ x\ y
+comment6.target=void\ addActor(greenfoot.Actor,\ int,\ int)
+comment7.params=xy
+comment7.target=int\ toReal(int)
+numComments=8
