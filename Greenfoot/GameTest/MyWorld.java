@@ -5,7 +5,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 public class MyWorld extends World
 {
-    private static Croc P1;
+    private static Smilodon P1;
     private static Overlay OVERLAY;
     private static Toxodon F1;
 
@@ -106,13 +106,13 @@ public class MyWorld extends World
         P1 = new Smilodon();
         addActor(P1, nX/2, nY/2 - 1);
     }
-    
+    int herdsize=3;
     private void addPrey()
     {
         for(int i=0;i<herdsize;i++)
         {
             addActor(F1,3,10);
-        }
+        } 
     }
 
     private void addOverlay() 
