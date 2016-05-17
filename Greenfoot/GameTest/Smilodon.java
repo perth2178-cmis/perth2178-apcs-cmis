@@ -52,6 +52,7 @@ public class Smilodon extends Predator
         {
             setRotation(getRotation() + 80);
         }
+        eat();
     } 
 
     public void eat()

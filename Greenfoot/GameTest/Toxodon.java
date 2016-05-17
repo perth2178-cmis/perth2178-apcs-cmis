@@ -4,21 +4,30 @@ public class Toxodon extends Prey
 {
     public void act() 
     {
+        move(3);
         if(Greenfoot.getRandomNumber(100)<10)
         {
             move(4);
-            if(getX() <=5||getX()>= getWorld().getWidth()-5)
+            if (getX() <= 15)
             {
-                turn(180);
+                setRotation(getRotation() + 80);
             }
-            if(getY() <=5||getY()>= getWorld().getHeight()-5)
+            if (getY() <= 15)
             {
-                turn(180);
+                setRotation(getRotation() + 80);
+            }
+            if (getX() >= getWorld().getWidth() - 15)
+            {
+                setRotation(getRotation() + 80);
+            }
+            if (getY() >= getWorld().getHeight() - 15)
+            {
+                setRotation(getRotation() + 80);
             }
         }
         if(Greenfoot.getRandomNumber(100)<10)
         {
             turn(Greenfoot.getRandomNumber(90)-45);
         }
-    }   
+    }
 }
