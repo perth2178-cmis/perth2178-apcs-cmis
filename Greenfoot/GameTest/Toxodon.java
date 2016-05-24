@@ -7,7 +7,6 @@ public class Toxodon extends Prey
         move(3);
         if(Greenfoot.getRandomNumber(100)<10)
         {
-            move(4);
             if (getX() <= 15)
             {
                 setRotation(getRotation() + 80);

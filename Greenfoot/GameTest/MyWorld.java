@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 public class MyWorld extends World
 {
     private static Smilodon P1;
+    private static Smilodon2 P2;
     private static Overlay OVERLAY;
     private static Toxodon F1;
 
@@ -22,17 +23,19 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(WIDTH, HEIGHT, 1, false);
-        getBackground().setColor(Color.BLACK);
-        getBackground().fill();
         addPlayer();
+        addPlayer2();
         addPrey();
         addOverlay();
         genWorld();
         setPaintOrder(Smilodon.class, Toxodon.class);
+        setPaintOrder(Smilodon2.class, Toxodon.class);
         setPaintOrder(Toxodon.class, Overlay.class);
         setActOrder(Toxodon.class, MyWorld.class);
+        setPaintOrder(Smilodon2.class, Overlay.class);
         setPaintOrder(Smilodon.class, Overlay.class);
         setActOrder(Smilodon.class, MyWorld.class);
+        setActOrder(Smilodon2.class, MyWorld.class);
     }
 
     public void act() 
@@ -83,6 +86,43 @@ public class MyWorld extends World
             img.drawImage(a.getImage(), a.getX() - a.getImage().getWidth()/2, a.getY() - a.getImage().getHeight()/2);//Lights up blocks
         }
 
+        //line of sight for Smilodon
+        List<Actor> visibleBlocks2 = new ArrayList<Actor>();
+        int p2X = P2.getX();// sets the origin of the cones at the players center
+        int p2Y = P2.getY();
+        while (i<=j) {
+            for(int oct = 0; oct < 8; oct++) {
+                int x = 0;
+                int y = 0;
+                switch(oct) {
+                    case 0: x = p2X + i; y = p2Y - j; break;
+                    case 1: x = p2X + j; y = p2Y - i; break;
+                    case 2: x = p2X + i; y = p2Y + j; break;
+                    case 3: x = p2X + j; y = p2Y + i; break;
+                    case 4: x = p2X - i; y = p2Y - j; break;
+                    case 5: x = p2X - j; y = p2Y - i; break;
+                    case 6: x = p2X - i; y = p2Y + j; break;
+                    case 7: x = p2X - j; y = p2Y + i; break;
+                }//creates the eight wedges of curves
+                Actor a = Util.getFirstActorBetween(this, p2X, p2Y, x, y, Tree.class);
+                if(a != null) {
+                    if(!visibleBlocks2.contains(a)) {
+                        visibleBlocks2.add(a);
+                    }
+                }
+            }
+            i++ ;
+            if (discriminant < 0) {                
+                discriminant += (i<<1) + 1 ;
+            } else {
+                j-- ;
+                discriminant += (1 + i - j)<<1 ;
+            }
+        }
+        for(Actor a : visibleBlocks) {
+            img.drawImage(a.getImage(), a.getX() - a.getImage().getWidth()/2, a.getY() - a.getImage().getHeight()/2);//Lights up blocks
+        }
+        
         //line of sight for Toxodon
         //List<Actor> visibleblocks = new ArrayList<Actor>();
         //if(F1 != null)
@@ -129,7 +169,7 @@ public class MyWorld extends World
         //}
     }
 
-    Tree[] tree= new Tree[10];
+    Tree[] tree= new Tree[30];
     private void genWorld() 
     {
         // Auto-generated from a map maker program I made.
@@ -155,6 +195,12 @@ public class MyWorld extends World
     {
         P1 = new Smilodon();
         addActor(P1, nX/2, nY/2 - 1);
+    }
+    
+    private void addPlayer2() 
+    {
+        P2 = new Smilodon2();
+        addActor(P2, nX/2, nY/2 - 1);
     }
     int herdsize=1;
     private void addPrey()
