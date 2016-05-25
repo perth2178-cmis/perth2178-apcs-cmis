@@ -28,14 +28,8 @@ public class MyWorld extends World
         addPrey();
         addOverlay();
         genWorld();
-        setPaintOrder(Smilodon.class, Toxodon.class);
-        setPaintOrder(Smilodon2.class, Toxodon.class);
-        setPaintOrder(Toxodon.class, Overlay.class);
-        setActOrder(Toxodon.class, MyWorld.class);
-        setPaintOrder(Smilodon2.class, Overlay.class);
-        setPaintOrder(Smilodon.class, Overlay.class);
-        setActOrder(Smilodon.class, MyWorld.class);
-        setActOrder(Smilodon2.class, MyWorld.class);
+        setPaintOrder(Smilodon.class,Smilodon2.class, Overlay.class,Toxodon.class);
+        setActOrder(Smilodon.class,Smilodon2.class,Toxodon.class, MyWorld.class);
     }
 
     public void act() 
@@ -44,7 +38,7 @@ public class MyWorld extends World
         img.clear();
         img.setColor(new Color(0, 0, 0, 200));//set the transparent thingy last number is Alpha it sets opacity
         img.fill();
-        
+
         //line of sight for Smilodon
         List<Actor> visibleBlocks = new ArrayList<Actor>();
         int pX = P1.getX();// sets the origin of the cones at the players center
@@ -68,9 +62,15 @@ public class MyWorld extends World
                     case 7: x = pX - j; y = pY + i; break;
                 }//creates the eight wedges of curves
                 Actor a = Util.getFirstActorBetween(this, pX, pY, x, y, Tree.class);
+                Actor b = Util.getFirstActorBetween(this, pX, pY, x, y, Toxodon.class);
                 if(a != null) {
                     if(!visibleBlocks.contains(a)) {
                         visibleBlocks.add(a);
+                    }
+                }
+                if(b != null) {
+                    if(!visibleBlocks.contains(b)) {
+                        visibleBlocks.add(b);
                     }
                 }
             }
@@ -82,7 +82,8 @@ public class MyWorld extends World
                 discriminant += (1 + i - j)<<1 ;
             }
         }
-        for(Actor a : visibleBlocks) {
+        for(Actor a : visibleBlocks) 
+        {
             img.drawImage(a.getImage(), a.getX() - a.getImage().getWidth()/2, a.getY() - a.getImage().getHeight()/2);//Lights up blocks
         }
 
@@ -90,24 +91,32 @@ public class MyWorld extends World
         List<Actor> visibleBlocks2 = new ArrayList<Actor>();
         int p2X = P2.getX();// sets the origin of the cones at the players center
         int p2Y = P2.getY();
+        i=0;
+        j=radius;
         while (i<=j) {
             for(int oct = 0; oct < 8; oct++) {
-                int x = 0;
-                int y = 0;
+                int tx = 0;
+                int ty = 0;
                 switch(oct) {
-                    case 0: x = p2X + i; y = p2Y - j; break;
-                    case 1: x = p2X + j; y = p2Y - i; break;
-                    case 2: x = p2X + i; y = p2Y + j; break;
-                    case 3: x = p2X + j; y = p2Y + i; break;
-                    case 4: x = p2X - i; y = p2Y - j; break;
-                    case 5: x = p2X - j; y = p2Y - i; break;
-                    case 6: x = p2X - i; y = p2Y + j; break;
-                    case 7: x = p2X - j; y = p2Y + i; break;
+                    case 0: tx = p2X + i; ty = p2Y - j; break;
+                    case 1: tx = p2X + j; ty = p2Y - i; break;
+                    case 2: tx = p2X + i; ty = p2Y + j; break;
+                    case 3: tx = p2X + j; ty = p2Y + i; break;
+                    case 4: tx = p2X - i; ty = p2Y - j; break;
+                    case 5: tx = p2X - j; ty = p2Y - i; break;
+                    case 6: tx = p2X - i; ty = p2Y + j; break;
+                    case 7: tx = p2X - j; ty = p2Y + i; break;
                 }//creates the eight wedges of curves
-                Actor a = Util.getFirstActorBetween(this, p2X, p2Y, x, y, Tree.class);
+                Actor a = Util.getFirstActorBetween(this, p2X, p2Y, tx, ty, Tree.class);
+                Actor b = Util.getFirstActorBetween(this, p2X, p2Y, tx, ty, Toxodon.class);
                 if(a != null) {
                     if(!visibleBlocks2.contains(a)) {
                         visibleBlocks2.add(a);
+                    }
+                }
+                if(b != null) {
+                    if(!visibleBlocks2.contains(b)) {
+                        visibleBlocks2.add(b);
                     }
                 }
             }
@@ -119,43 +128,45 @@ public class MyWorld extends World
                 discriminant += (1 + i - j)<<1 ;
             }
         }
-        for(Actor a : visibleBlocks) {
+        for(Actor a : visibleBlocks2) {
             img.drawImage(a.getImage(), a.getX() - a.getImage().getWidth()/2, a.getY() - a.getImage().getHeight()/2);//Lights up blocks
         }
-        
+
         //line of sight for Toxodon
-        //List<Actor> visibleblocks = new ArrayList<Actor>();
-        //if(F1 != null)
-        //{
-            /*int fX = F1.getX();// sets the origin of the cones at the players center
+        List<Actor> visibleblocks = new ArrayList<Actor>();
+        if(F1 != null)
+        {
+            int fX = F1.getX();// sets the origin of the cones at the players center
             int fY = F1.getY();
+            i=0;
+            j=radius;
             while (i<=j) 
             {
                 for(int oct = 0; oct < 8; oct++) 
                 {
-                    int x = 0;
-                    int y = 0;
+                    int px = 0;
+                    int py = 0;
                     switch(oct) 
                     {
-                        case 0: x = fX + i; y = fY - j; break;
-                        case 1: x = fX + j; y = fY - i; break;
-                        case 2: x = fX + i; y = fY + j; break;
-                        case 3: x = fX + j; y = fY + i; break;
-                        case 4: x = fX - i; y = fY - j; break;
-                        case 5: x = fX - j; y = fY - i; break;
-                        case 6: x = fX - i; y = fY + j; break;
-                        case 7: x = fX - j; y = fY + i; break;
+                        case 0: px = fX + i; py = fY - j; break;
+                        case 1: px = fX + j; py = fY - i; break;
+                        case 2: px = fX + i; py = fY + j; break;
+                        case 3: px = fX + j; py = fY + i; break;
+                        case 4: px = fX - i; py = fY - j; break;
+                        case 5: px = fX - j; py = fY - i; break;
+                        case 6: px = fX - i; py = fY + j; break;
+                        case 7: px = fX - j; py = fY + i; break;
                     }//creates the eight wedges of curves
-                    Actor a = Util.getFirstActorBetween(this, fX, fY, x, y, Smilodon.class);
+                    Actor a = Util.getFirstActorBetween(this, fX, fY, px, py, Smilodon.class);
                     if(a != null) 
                     {
-                        if(!visibleBlocks.contains(a)) 
+                        if(!visibleblocks.contains(a)) 
                         {
                             visibleblocks.add(a);
                         }
-                        x = Math.min(WIDTH - 1, Math.max(0, x));
-                        y = Math.min(HEIGHT - 1, Math.max(0, y));
-                        img.setColorAt(x, y, Color.RED);
+                        px = Math.min(WIDTH - 1, Math.max(0, px));
+                        py = Math.min(HEIGHT - 1, Math.max(0, py));
+                        img.setColorAt(px, py, Color.RED);
                     }
                 }
                 i++ ;
@@ -165,10 +176,10 @@ public class MyWorld extends World
                     j-- ;
                     discriminant += (1 + i - j)<<1 ;
                 }
-            }*/
-        //}
+            }
+            OVERLAY.setImage(img);
+        }
     }
-
     Tree[] tree= new Tree[30];
     private void genWorld() 
     {
@@ -196,7 +207,7 @@ public class MyWorld extends World
         P1 = new Smilodon();
         addActor(P1, nX/2, nY/2 - 1);
     }
-    
+
     private void addPlayer2() 
     {
         P2 = new Smilodon2();

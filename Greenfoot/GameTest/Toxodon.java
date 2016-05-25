@@ -28,5 +28,18 @@ public class Toxodon extends Prey
         {
             turn(Greenfoot.getRandomNumber(90)-45);
         }
+        detect();
+    }
+    
+    public void detect()
+    {
+        if(MyWorld.visibleblocks.contains(a))
+        {
+            move(10);
+        }
+        else
+        {
+            move(3);
+        }
     }
 }
