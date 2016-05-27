@@ -28,12 +28,12 @@ public class Toxodon extends Prey
         {
             turn(Greenfoot.getRandomNumber(90)-45);
         }
-        detect();
+        //detect();
     }
     
-    public void detect()
+    /*public void detect()
     {
-        if(MyWorld.visibleblocks.contains(a))
+        if()
         {
             move(10);
         }
@@ -41,5 +41,5 @@ public class Toxodon extends Prey
         {
             move(3);
         }
-    }
+    }*/
 }
