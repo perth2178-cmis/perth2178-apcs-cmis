@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri May 27 09:42:53 ICT 2016
+#Mon May 30 11:33:29 ICT 2016
 editor.fx.0.height=700
 target2.width=80
 target8.name=Smilodon
@@ -24,6 +24,7 @@ class.Tree.superclass=Objects
 target4.y=190
 dependency10.from=MyWorld
 target4.x=100
+class.Game_Over.superclass=greenfoot.Actor
 dependency6.type=UsesDependency
 target4.showInterface=false
 target9.type=ClassTarget
@@ -127,7 +128,7 @@ target3.name=Smilodon2
 class.Prey.superclass=greenfoot.Actor
 target6.showInterface=false
 target3.typeParameters=
-class.Smilodon2.image=Smilodon.png
+class.Smilodon2.image=Smilodon2.png
 target9.showInterface=false
 dependency3.to=Overlay
 target7.name=Util

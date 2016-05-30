@@ -8,7 +8,7 @@ public class MyWorld extends World
     private static Smilodon P1;
     private static Smilodon2 P2;
     private static Overlay OVERLAY;
-    private static Toxodon[] F1= new Toxodon[3];
+    private static Toxodon[] F1= new Toxodon[5];
 
     private static final int WIDTH = 1200;
     private static final int HEIGHT = 800;
@@ -36,7 +36,7 @@ public class MyWorld extends World
     {
         GreenfootImage img = OVERLAY.getImage();
         img.clear();
-        img.setColor(new Color(0, 0, 0));//set the transparent thingy last number is Alpha it sets opacity
+        img.setColor(new Color(0, 0, 0,0));//set the transparent thingy last number is Alpha it sets opacity
         img.fill();
 
         //line of sight for Smilodon
@@ -114,6 +114,7 @@ public class MyWorld extends World
                         visibleBlocks2.add(a);
                     }
                 }
+
                 if(b != null) {
                     if(!visibleBlocks2.contains(b)) {
                         visibleBlocks2.add(b);
@@ -211,7 +212,7 @@ public class MyWorld extends World
         P2 = new Smilodon2();
         addActor(P2, 10,15);
     }
-    
+
     private void addPrey()
     {
         for(int i=0;i<F1.length;i++)
