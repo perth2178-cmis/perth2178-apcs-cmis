@@ -1,19 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Game_Over here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import java.awt.Color;
 public class Game_Over extends Actor
 {
-    /**
-     * Act - do whatever the Game_Over wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    public Game_Over() 
     {
-        // Add your action code here.
+        setImage(new GreenfootImage("Herd Demolished", 48, Color.RED, Color.WHITE));
     }    
 }

@@ -27,16 +27,17 @@ public class MyWorld extends World
         addPlayer2();
         addPrey();
         addOverlay();
+        getScores();
         genWorld();
-        setPaintOrder(Smilodon.class,Smilodon2.class, Overlay.class,Toxodon.class);
-        setActOrder(Smilodon.class,Smilodon2.class,Toxodon.class, MyWorld.class);
+        setPaintOrder(Score.class,Smilodon.class,Smilodon2.class, Overlay.class,Toxodon.class);
+        setActOrder(Score.class,Smilodon.class,Smilodon2.class,Toxodon.class, MyWorld.class);
     }
 
     public void act() 
     {
         GreenfootImage img = OVERLAY.getImage();
         img.clear();
-        img.setColor(new Color(0, 0, 0,0));//set the transparent thingy last number is Alpha it sets opacity
+        img.setColor(new Color(0, 0, 0));//set the transparent thingy last number is Alpha it sets opacity
         img.fill();
 
         //line of sight for Smilodon
@@ -132,53 +133,6 @@ public class MyWorld extends World
         for(Actor a : visibleBlocks2) {
             img.drawImage(a.getImage(), a.getX() - a.getImage().getWidth()/2, a.getY() - a.getImage().getHeight()/2);//Lights up blocks
         }
-
-        //line of sight for Toxodon
-        /*List<Actor> visibleblocks = new ArrayList<Actor>();
-        if(this.F1 != null)
-        {
-        int fX = F1.getX();// sets the origin of the cones at the players center
-        int fY = F1.getY();
-        i=0;
-        j=radius;
-        while (i<=j) 
-        {
-        for(int oct = 0; oct < 8; oct++) 
-        {
-        int px = 0;
-        int py = 0;
-        switch(oct) 
-        {
-        case 0: px = fX + i; py = fY - j; break;
-        case 1: px = fX + j; py = fY - i; break;
-        case 2: px = fX + i; py = fY + j; break;
-        case 3: px = fX + j; py = fY + i; break;
-        case 4: px = fX - i; py = fY - j; break;
-        case 5: px = fX - j; py = fY - i; break;
-        case 6: px = fX - i; py = fY + j; break;
-        case 7: px = fX - j; py = fY + i; break;
-        }//creates the eight wedges of curves
-        Actor a = Util.getFirstActorBetween(this, fX, fY, px, py, Smilodon.class);
-        if(a != null) 
-        {
-        if(!visibleblocks.contains(a)) 
-        {
-        visibleblocks.add(a);
-        }
-        px = Math.min(WIDTH - 1, Math.max(0, px));
-        py = Math.min(HEIGHT - 1, Math.max(0, py));
-        img.setColorAt(px, py, Color.RED);
-        }
-        }
-        i++ ;
-        if (discriminant < 0) {                
-        discriminant += (i<<1) + 1 ;
-        } else {
-        j-- ;
-        discriminant += (1 + i - j)<<1 ;
-        }
-        }
-        }*/
         OVERLAY.setImage(img);
     }
     Tree[] tree= new Tree[30];
@@ -212,6 +166,13 @@ public class MyWorld extends World
         P2 = new Smilodon2();
         addActor(P2, 10,15);
     }
+    
+    int herdsize = 0;
+    public int herdsize()
+    {
+        herdsize = F1.length;
+        return herdsize;
+    }
 
     private void addPrey()
     {
@@ -226,5 +187,12 @@ public class MyWorld extends World
     {
         OVERLAY = new Overlay();
         addObject(OVERLAY, WIDTH/2, HEIGHT/2);
+    }
+    
+    Score scoreboard= new Score();
+    public Score getScores()
+    {
+        addObject(scoreboard,100,100);
+        return scoreboard;
     }
 }

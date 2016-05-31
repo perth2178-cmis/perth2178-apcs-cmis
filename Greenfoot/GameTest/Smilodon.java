@@ -61,6 +61,10 @@ public class Smilodon extends Predator
         {
             Actor eaten=getOneIntersectingObject(Toxodon.class);
             getWorld().removeObject(eaten);
+            World myWorld = getWorld();
+            MyWorld world = (MyWorld)myWorld;
+            Score counter = world.getScores();
+            counter.minusscore();
         }
     }   
 }
