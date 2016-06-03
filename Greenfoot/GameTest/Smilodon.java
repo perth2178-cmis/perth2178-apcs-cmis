@@ -40,15 +40,15 @@ public class Smilodon extends Predator
         {
             setRotation(getRotation() + 80);
         }
-        if (getY() <= 15)
+        else if (getY() <= 15)
         {
             setRotation(getRotation() + 80);
         }
-        if (getX() >= getWorld().getWidth() - 15)
+        else if (getX() >= getWorld().getWidth() - 15)
         {
             setRotation(getRotation() + 80);
         }
-        if (getY() >= getWorld().getHeight() - 15)
+        else if (getY() >= getWorld().getHeight() - 15)
         {
             setRotation(getRotation() + 80);
         }
